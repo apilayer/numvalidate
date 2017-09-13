@@ -14,7 +14,7 @@ type State = {
   inputNamePristine: boolean,
 };
 
-class DashboardTokensModal extends Component<void, Props, State> {
+class DashboardTokensModal extends Component<Props, State> {
   state = {
     inputNameValue: '',
     inputNamePristine: true,

@@ -7,7 +7,7 @@ type Props = {
   error?: ?string,
 };
 
-class TextInput extends Component<void, Props, void> {
+class TextInput extends Component<Props, void> {
   render() {
     const { label, error, ...otherProps } = this.props;
     return (

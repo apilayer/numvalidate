@@ -36,7 +36,7 @@ type State = {
   user?: User,
 };
 
-class Dashboard extends Component<void, Props, State> {
+class Dashboard extends Component<Props, State> {
   static getInitialProps(ctx) {
     const cookieAccessToken = authService.getAccessToken(ctx.req);
     return { cookieAccessToken };
@@ -199,6 +199,7 @@ class Dashboard extends Component<void, Props, State> {
                 onPlanChangeFailure={this._showSnackbar}
               />
               {!_.isEmpty(user.creditCard) &&
+              user.creditCard &&
               user.subscription.planId !== keys.STRIPE_FREE_PLAN_ID && (
                 <DashboardCreditCard
                   userEmail={user.email}

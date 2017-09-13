@@ -7,7 +7,7 @@ type Props = {
   children?: any,
 };
 
-class TextInput extends Component<void, Props, void> {
+class TextInput extends Component<Props, void> {
   render() {
     const { onTitleClick } = this.props;
     return (

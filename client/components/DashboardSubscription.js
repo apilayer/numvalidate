@@ -23,7 +23,7 @@ type State = {
   updatingSubscriptionPlan: boolean,
 };
 
-class DashboardSubscription extends Component<void, Props, State> {
+class DashboardSubscription extends Component<Props, State> {
   state = {
     visibleModal: null,
     updatingSubscriptionPlan: false,

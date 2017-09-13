@@ -14,7 +14,7 @@ type Props = {
   onStripeTokenReceived: (token: string) => mixed,
 };
 
-class StripeCheckoutButton extends Component<void, Props, void> {
+class StripeCheckoutButton extends Component<Props, void> {
   render() {
     const {
       amount,

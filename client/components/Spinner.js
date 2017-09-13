@@ -6,7 +6,7 @@ type Props = {
   visible?: boolean,
 };
 
-class Spinner extends Component<void, Props, void> {
+class Spinner extends Component<Props, void> {
   render() {
     const { visible, ...otherProps } = this.props;
     return (

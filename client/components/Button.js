@@ -10,7 +10,7 @@ type Props = {
   children?: any,
 };
 
-class Button extends Component<void, Props, void> {
+class Button extends Component<Props, void> {
   render() {
     const { type = 'default', size = 'medium', flat, fill, children, ...otherProps } = this.props;
     const typeClassName = `Button-${type}`;

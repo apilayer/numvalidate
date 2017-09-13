@@ -28,7 +28,7 @@ type State = {
   deletingApiToken: boolean,
 };
 
-class DashboardTokens extends Component<void, Props, State> {
+class DashboardTokens extends Component<Props, State> {
   state = {
     visibleTokens: [],
     modalVisible: false,

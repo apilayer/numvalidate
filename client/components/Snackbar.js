@@ -10,7 +10,7 @@ type Props = {
   onCloseClick: () => mixed,
 };
 
-class Snackbar extends Component<void, Props, void> {
+class Snackbar extends Component<Props, void> {
   render() {
     const { message = '', visible, onCloseClick } = this.props;
     return (

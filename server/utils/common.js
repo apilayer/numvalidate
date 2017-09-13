@@ -3,6 +3,24 @@ const crypto = require('crypto');
 const jsonwebtoken = require('jsonwebtoken');
 
 /**
+ * Parses a string to an integer.
+ * Useful for converting environment variable (while maintaing the 0 values).
+ * @param {Number|String} input The string to convert to integer.
+ * @param {Number} defaultOutput Returned if the string is not a valid number.
+ * @return {Promise} The generated Promise.
+ */
+exports.toInt = (input, defaultOutput) => {
+  if (typeof input === 'number') {
+    return input;
+  }
+  if (input !== undefined && input !== null && !isNaN(input)) {
+    return Number.parseInt(input, 10);
+  } else {
+    return defaultOutput;
+  }
+};
+
+/**
  * Helper function to convert a callback to a Promise.
  * @param {Function} fn The function to promisify.
  * @return {Promise} The generated Promise.

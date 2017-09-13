@@ -13,7 +13,7 @@ type Props = {
   onStripeTokenReceived?: (token: string) => mixed,
 };
 
-class DashboardSubscriptionChangeModal extends Component<void, Props, void> {
+class DashboardSubscriptionChangeModal extends Component<Props, void> {
   render() {
     const { text, amount, onCancelClick, onConfirmClick, onStripeTokenReceived } = this.props;
     return (
@@ -27,7 +27,8 @@ class DashboardSubscriptionChangeModal extends Component<void, Props, void> {
             </Button>
           </div>
           <div className={'SubscriptionChangeModal-button'}>
-            {amount && (
+            {amount &&
+            onStripeTokenReceived && (
               <StripeCheckoutButton
                 text={strings.CONFIRM}
                 amount={amount}

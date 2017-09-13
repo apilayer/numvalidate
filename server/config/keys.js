@@ -1,11 +1,12 @@
 const ms = require('ms');
+const commonUtils = require('../utils/common.js');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const IS_ENV_DEVELOPMENT = NODE_ENV === 'development';
 const IS_ENV_PRODUCTION = NODE_ENV === 'production';
 const IS_ENV_TEST = NODE_ENV === 'test';
 
-const PORT = Number.parseInt(process.env.PORT || '3000', 10) || 3000;
+const PORT = commonUtils.toInt(process.env.PORT, 3000);
 
 const AUTH0_MANAGEMENT_API_AUDIENCE = process.env.AUTH0_MANAGEMENT_API_AUDIENCE;
 const AUTH0_MANAGEMENT_API_CLIENT_ID = process.env.AUTH0_MANAGEMENT_API_CLIENT_ID;
@@ -22,13 +23,22 @@ const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
 const STRIPE_FREE_PLAN_ID = process.env.STRIPE_FREE_PLAN_ID;
 const STRIPE_PRO_PLAN_ID = process.env.STRIPE_PRO_PLAN_ID;
 
-const REDIS_CACHE_EXPIRY_IN_MS = process.env.REDIS_CACHE_EXPIRY_IN_MS || ms('1d');
+const REDIS_CACHE_EXPIRY_IN_MS = commonUtils.toInt(process.env.REDIS_CACHE_EXPIRY_IN_MS, ms('1d'));
 
-const MAX_API_TOKENS_PER_USER = process.env.MAX_API_TOKENS_PER_USER || 5;
-const RATE_LIMIT_WINDOW_IN_MS = process.env.RATE_LIMIT_WINDOW_IN_MS || ms('1d');
-const RATE_LIMIT_FOR_UNAUTHENTICATED_REQUESTS = process.env.RATE_LIMIT_FOR_UNAUTHENTICATED_REQUESTS;
-const RATE_LIMIT_FOR_FREE_USER_REQUESTS = process.env.RATE_LIMIT_FOR_FREE_USER_REQUESTS;
-const RATE_LIMIT_FOR_PRO_USER_REQUESTS = process.env.RATE_LIMIT_FOR_PRO_USER_REQUESTS;
+const MAX_API_TOKENS_PER_USER = commonUtils.toInt(process.env.MAX_API_TOKENS_PER_USER, 5);
+const RATE_LIMIT_WINDOW_IN_MS = commonUtils.toInt(process.env.RATE_LIMIT_WINDOW_IN_MS || ms('1d'));
+const RATE_LIMIT_FOR_UNAUTHENTICATED_REQUESTS = commonUtils.toInt(
+  process.env.RATE_LIMIT_FOR_UNAUTHENTICATED_REQUESTS,
+  100
+);
+const RATE_LIMIT_FOR_FREE_USER_REQUESTS = commonUtils.toInt(
+  process.env.RATE_LIMIT_FOR_FREE_USER_REQUESTS,
+  1000
+);
+const RATE_LIMIT_FOR_PRO_USER_REQUESTS = commonUtils.toInt(
+  process.env.RATE_LIMIT_FOR_PRO_USER_REQUESTS,
+  10000
+);
 
 const SENTRY_DNS = process.env.SENTRY_DNS;
 

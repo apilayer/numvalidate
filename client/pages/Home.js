@@ -15,7 +15,7 @@ type Props = {
   authenticated: boolean,
 };
 
-class Home extends Component<void, Props, void> {
+class Home extends Component<Props, void> {
   static getInitialProps(ctx) {
     const authenticated = authService.isAuthenticated(ctx.req);
     return { authenticated };

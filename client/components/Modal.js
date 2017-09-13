@@ -10,7 +10,7 @@ type Props = {
   children?: any,
 };
 
-class Modal extends Component<void, Props, void> {
+class Modal extends Component<Props, void> {
   render() {
     const { title, visible, onCancelClick, children } = this.props;
     if (visible) {

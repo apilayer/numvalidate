@@ -21,7 +21,7 @@ type State = {
   updatingPaymentInfo: boolean,
 };
 
-class DashboardCreditCard extends Component<void, Props, State> {
+class DashboardCreditCard extends Component<Props, State> {
   state = {
     updatingPaymentInfo: false,
   };

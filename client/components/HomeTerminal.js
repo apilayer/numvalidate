@@ -41,7 +41,7 @@ const VALIDATION_OUTPUT_3 = `{
     "countryName": "United States",
   }`;
 
-class HomeTerminal extends Component<void, Props, void> {
+class HomeTerminal extends Component<Props, void> {
   componentDidMount() {
     new Typed('#typed-demo', {
       strings: [
