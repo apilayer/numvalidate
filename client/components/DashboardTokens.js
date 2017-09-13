@@ -77,8 +77,7 @@ class DashboardTokens extends Component<Props, State> {
 
   render() {
     const { userApiTokens = [] } = this.props;
-    const apiTokensLimitReached = userApiTokens.length > keys.MAX_API_TOKENS_PER_USER;
-    console.log(apiTokensLimitReached);
+    const apiTokensLimitReached = userApiTokens.length >= keys.MAX_API_TOKENS_PER_USER;
     return (
       <DashboardSection
         title={strings.API_TOKEN_TITLE}
