@@ -15,10 +15,12 @@
 
 .Snackbar-enter {
   bottom: 0px;
+  opacity: 1;
 }
 
 .Snackbar-exit {
   bottom: -52px;
+  opacity: 0;
 }
 
 .Snackbar-content {
