@@ -1,0 +1,46 @@
+@import '../colors';
+
+.Dashboard {
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.Dashboard-error {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Dashboard-error p {
+  margin-bottom: 40px;
+}
+
+.Dashboard-loading {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Dashboard-content {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.Dashboard-toolbar a {
+  font-size: 14px;
+  margin-left: 20px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,12 @@
+:root {
+  --color-primary: #fff;
+  --color-accent: #fff;
+  --color-background: #21272f;
+  --color-error: #d64242;
+  --color-text-1: #fff;
+  --color-text-2: rgba(255, 255, 255, 0.5);
+  --color-grey-dark: rgba(255, 255, 255, 0.1);
+  --color-grey-light: rgba(255, 255, 255, 0.5);
+  --color-grey-lighter: rgba(255, 255, 255, 0.6);
+  --color-grey-lightest: rgba(255, 255, 255, 0.8);
+}

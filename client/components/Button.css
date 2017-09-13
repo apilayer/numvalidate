@@ -1,0 +1,67 @@
+@import '../colors';
+
+.Button {
+  background: transparent;
+  padding: 8px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 100px;
+  transition: all 0.25s ease-in-out;
+}
+
+.Button:hover:enabled {
+  color: var(--color-background);
+  background: var(--color-primary);
+}
+
+.Button:disabled {
+  cursor: initial;
+  color: var(--color-grey-dark);
+  border: 2px solid var(--color-grey-dark);
+}
+
+.Button-default {
+  color: var(--color-grey-lightest);
+  border: 2px solid var(--color-grey-lightest);
+}
+
+.Button-info {
+  padding: 6px;
+  font-size: 12px;
+  color: var(--color-grey-lightest);
+  border: 2px solid var(--color-grey-lightest);
+}
+
+.Button-medium {
+}
+
+.Button-big {
+  font-weight: bold;
+  padding: 14px 42px;
+}
+
+.Button-big:hover:enabled,
+.Button-big:focus {
+  transform: scale(1.05);
+}
+
+.Button-flat {
+  font-weight: bold;
+  border: none;
+}
+
+.Button-warn {
+  color: #fdbc72;
+}
+
+.Button-danger {
+  color: #c23d4b;
+}
+
+.Button-fill {
+  width: 100%;
+}

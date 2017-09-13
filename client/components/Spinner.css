@@ -1,0 +1,26 @@
+@import '../colors';
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Spinner-visible {
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border-top: 2px solid var(--color-primary);
+  border-right: 2px solid transparent;
+  animation: spinner .6s linear infinite;
+}
+
+.Spinner-hidden {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,103 @@
+@import '../colors';
+
+.Subscription-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: background-color .15s ease 0s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 767px) {
+  .Subscription-header {
+    display: none;
+  }
+}
+
+.Subscription-header-cell {
+  display: flex;
+  padding: 6px 20px;
+}
+
+.Subscription-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color .15s ease 0s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 400;
+  color: var(--color-text-1);
+}
+
+@media only screen and (max-width: 767px) {
+  .Subscription-content {
+    flex-direction: column;
+    font-size: 14px;
+    margin-bottom: 30px;
+    border-bottom: none;
+  }
+}
+
+.Subscription-content-cell {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  min-height: 60px;
+}
+
+@media only screen and (max-width: 767px) {
+  .Subscription-content-cell {
+    margin-bottom: 10px;
+  }
+}
+
+.Subscription-content-cell-separator {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+@media only screen and (max-width: 767px) {
+  .Subscription-content-cell-separator {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .Subscription-content-cell-amount {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .Subscription-content-cell-description {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+.Subscription-content-cell > p {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+  .Subscription-content-cell p {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .Subscription-content-cell-current {
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 0px;
+    opacity: 0.8;
+  }
+}

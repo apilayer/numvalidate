@@ -1,0 +1,81 @@
+@import '../colors';
+
+.Snackbar {
+  width: 100%;
+  height: 52px;
+  color: white;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  transition: all 0.5s;
+  bottom: -52px;
+}
+
+.Snackbar-enter {
+  bottom: 0px;
+}
+
+.Snackbar-exit {
+  bottom: -52px;
+}
+
+.Snackbar-content {
+  display: flex;
+  height: 100%;
+  min-width: 768px;
+  max-width: 768px;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #373c43;
+  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 767px) {
+  .Snackbar {
+    height: 78px;
+  }
+
+  .Snackbar-content {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    bottom: -78px;
+  }
+
+  .Snackbar-exit {
+    bottom: -78px;
+  }
+
+  .Snackbar-content p {
+    font-size: 14px;
+    word-wrap: break-word;
+  }
+}
+
+@keyframes enter {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 86px;
+    opacity: 1;
+  }
+}
+
+@keyframes exit {
+  from {
+    bottom: 86px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

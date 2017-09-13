@@ -1,0 +1,930 @@
+{
+  "AF": {
+    "countryName": "Afghanistan",
+    "countryPrefix": "93"
+  },
+  "AL": {
+    "countryName": "Albania",
+    "countryPrefix": "355"
+  },
+  "DZ": {
+    "countryName": "Algeria",
+    "countryPrefix": "213"
+  },
+  "AS": {
+    "countryName": "American Samoa",
+    "countryPrefix": "1"
+  },
+  "AD": {
+    "countryName": "Andorra",
+    "countryPrefix": "376"
+  },
+  "AO": {
+    "countryName": "Angola",
+    "countryPrefix": "244"
+  },
+  "AI": {
+    "countryName": "Anguilla",
+    "countryPrefix": "1"
+  },
+  "AG": {
+    "countryName": "Antigua",
+    "countryPrefix": "1"
+  },
+  "AR": {
+    "countryName": "Argentina",
+    "countryPrefix": "54"
+  },
+  "AM": {
+    "countryName": "Armenia",
+    "countryPrefix": "374"
+  },
+  "AW": {
+    "countryName": "Aruba",
+    "countryPrefix": "297"
+  },
+  "AU": {
+    "countryName": "Australia",
+    "countryPrefix": "61"
+  },
+  "AT": {
+    "countryName": "Austria",
+    "countryPrefix": "43"
+  },
+  "AZ": {
+    "countryName": "Azerbaijan",
+    "countryPrefix": "994"
+  },
+  "BH": {
+    "countryName": "Bahrain",
+    "countryPrefix": "973"
+  },
+  "BD": {
+    "countryName": "Bangladesh",
+    "countryPrefix": "880"
+  },
+  "BB": {
+    "countryName": "Barbados",
+    "countryPrefix": "1"
+  },
+  "BY": {
+    "countryName": "Belarus",
+    "countryPrefix": "375"
+  },
+  "BE": {
+    "countryName": "Belgium",
+    "countryPrefix": "32"
+  },
+  "BZ": {
+    "countryName": "Belize",
+    "countryPrefix": "501"
+  },
+  "BJ": {
+    "countryName": "Benin",
+    "countryPrefix": "229"
+  },
+  "BM": {
+    "countryName": "Bermuda",
+    "countryPrefix": "1"
+  },
+  "BT": {
+    "countryName": "Bhutan",
+    "countryPrefix": "975"
+  },
+  "BO": {
+    "countryName": "Bolivia",
+    "countryPrefix": "591"
+  },
+  "BA": {
+    "countryName": "Bosnia and Herzegovina",
+    "countryPrefix": "387"
+  },
+  "BW": {
+    "countryName": "Botswana",
+    "countryPrefix": "267"
+  },
+  "BR": {
+    "countryName": "Brazil",
+    "countryPrefix": "55"
+  },
+  "IO": {
+    "countryName": "British Indian Ocean Territory",
+    "countryPrefix": "246"
+  },
+  "VG": {
+    "countryName": "British Virgin Islands",
+    "countryPrefix": "1"
+  },
+  "BN": {
+    "countryName": "Brunei",
+    "countryPrefix": "673"
+  },
+  "BG": {
+    "countryName": "Bulgaria",
+    "countryPrefix": "359"
+  },
+  "BF": {
+    "countryName": "Burkina Faso",
+    "countryPrefix": "226"
+  },
+  "MM": {
+    "countryName": "Burma Myanmar",
+    "countryPrefix": "95"
+  },
+  "BI": {
+    "countryName": "Burundi",
+    "countryPrefix": "257"
+  },
+  "KH": {
+    "countryName": "Cambodia",
+    "countryPrefix": "855"
+  },
+  "CM": {
+    "countryName": "Cameroon",
+    "countryPrefix": "237"
+  },
+  "CA": {
+    "countryName": "Canada",
+    "countryPrefix": "1"
+  },
+  "CV": {
+    "countryName": "Cape Verde",
+    "countryPrefix": "238"
+  },
+  "KY": {
+    "countryName": "Cayman Islands",
+    "countryPrefix": "1"
+  },
+  "CF": {
+    "countryName": "Central African Republic",
+    "countryPrefix": "236"
+  },
+  "TD": {
+    "countryName": "Chad",
+    "countryPrefix": "235"
+  },
+  "CL": {
+    "countryName": "Chile",
+    "countryPrefix": "56"
+  },
+  "CN": {
+    "countryName": "China",
+    "countryPrefix": "86"
+  },
+  "CO": {
+    "countryName": "Colombia",
+    "countryPrefix": "57"
+  },
+  "KM": {
+    "countryName": "Comoros",
+    "countryPrefix": "269"
+  },
+  "CK": {
+    "countryName": "Cook Islands",
+    "countryPrefix": "682"
+  },
+  "CR": {
+    "countryName": "Costa Rica",
+    "countryPrefix": "506"
+  },
+  "CI": {
+    "countryName": "C\u00f4te d'Ivoire",
+    "countryPrefix": "225"
+  },
+  "HR": {
+    "countryName": "Croatia",
+    "countryPrefix": "385"
+  },
+  "CU": {
+    "countryName": "Cuba",
+    "countryPrefix": "53"
+  },
+  "CY": {
+    "countryName": "Cyprus",
+    "countryPrefix": "357"
+  },
+  "CZ": {
+    "countryName": "Czech Republic",
+    "countryPrefix": "420"
+  },
+  "CD": {
+    "countryName": "Democratic Republic of Congo",
+    "countryPrefix": "243"
+  },
+  "DK": {
+    "countryName": "Denmark",
+    "countryPrefix": "45"
+  },
+  "DJ": {
+    "countryName": "Djibouti",
+    "countryPrefix": "253"
+  },
+  "DM": {
+    "countryName": "Dominica",
+    "countryPrefix": "1"
+  },
+  "DO": {
+    "countryName": "Dominican Republic",
+    "countryPrefix": "1"
+  },
+  "EC": {
+    "countryName": "Ecuador",
+    "countryPrefix": "593"
+  },
+  "EG": {
+    "countryName": "Egypt",
+    "countryPrefix": "20"
+  },
+  "SV": {
+    "countryName": "El Salvador",
+    "countryPrefix": "503"
+  },
+  "GQ": {
+    "countryName": "Equatorial Guinea",
+    "countryPrefix": "240"
+  },
+  "ER": {
+    "countryName": "Eritrea",
+    "countryPrefix": "291"
+  },
+  "EE": {
+    "countryName": "Estonia",
+    "countryPrefix": "372"
+  },
+  "ET": {
+    "countryName": "Ethiopia",
+    "countryPrefix": "251"
+  },
+  "FK": {
+    "countryName": "Falkland Islands",
+    "countryPrefix": "500"
+  },
+  "FO": {
+    "countryName": "Faroe Islands",
+    "countryPrefix": "298"
+  },
+  "FM": {
+    "countryName": "Federated States of Micronesia",
+    "countryPrefix": "691"
+  },
+  "FJ": {
+    "countryName": "Fiji",
+    "countryPrefix": "679"
+  },
+  "FI": {
+    "countryName": "Finland",
+    "countryPrefix": "358"
+  },
+  "FR": {
+    "countryName": "France",
+    "countryPrefix": "33"
+  },
+  "GF": {
+    "countryName": "French Guiana",
+    "countryPrefix": "594"
+  },
+  "PF": {
+    "countryName": "French Polynesia",
+    "countryPrefix": "689"
+  },
+  "GA": {
+    "countryName": "Gabon",
+    "countryPrefix": "241"
+  },
+  "GE": {
+    "countryName": "Georgia",
+    "countryPrefix": "995"
+  },
+  "DE": {
+    "countryName": "Germany",
+    "countryPrefix": "49"
+  },
+  "GH": {
+    "countryName": "Ghana",
+    "countryPrefix": "233"
+  },
+  "GI": {
+    "countryName": "Gibraltar",
+    "countryPrefix": "350"
+  },
+  "GR": {
+    "countryName": "Greece",
+    "countryPrefix": "30"
+  },
+  "GL": {
+    "countryName": "Greenland",
+    "countryPrefix": "299"
+  },
+  "GD": {
+    "countryName": "Grenada",
+    "countryPrefix": "1"
+  },
+  "GP": {
+    "countryName": "Guadeloupe",
+    "countryPrefix": "590"
+  },
+  "GU": {
+    "countryName": "Guam",
+    "countryPrefix": "1"
+  },
+  "GT": {
+    "countryName": "Guatemala",
+    "countryPrefix": "502"
+  },
+  "GN": {
+    "countryName": "Guinea",
+    "countryPrefix": "224"
+  },
+  "GW": {
+    "countryName": "Guinea-Bissau",
+    "countryPrefix": "245"
+  },
+  "GY": {
+    "countryName": "Guyana",
+    "countryPrefix": "592"
+  },
+  "HT": {
+    "countryName": "Haiti",
+    "countryPrefix": "509"
+  },
+  "HN": {
+    "countryName": "Honduras",
+    "countryPrefix": "504"
+  },
+  "HK": {
+    "countryName": "Hong Kong",
+    "countryPrefix": "852"
+  },
+  "HU": {
+    "countryName": "Hungary",
+    "countryPrefix": "36"
+  },
+  "IS": {
+    "countryName": "Iceland",
+    "countryPrefix": "354"
+  },
+  "IN": {
+    "countryName": "India",
+    "countryPrefix": "91"
+  },
+  "ID": {
+    "countryName": "Indonesia",
+    "countryPrefix": "62"
+  },
+  "IR": {
+    "countryName": "Iran",
+    "countryPrefix": "98"
+  },
+  "IQ": {
+    "countryName": "Iraq",
+    "countryPrefix": "964"
+  },
+  "IE": {
+    "countryName": "Ireland",
+    "countryPrefix": "353"
+  },
+  "IL": {
+    "countryName": "Israel",
+    "countryPrefix": "972"
+  },
+  "IT": {
+    "countryName": "Italy",
+    "countryPrefix": "39"
+  },
+  "JM": {
+    "countryName": "Jamaica",
+    "countryPrefix": "1"
+  },
+  "JP": {
+    "countryName": "Japan",
+    "countryPrefix": "81"
+  },
+  "JO": {
+    "countryName": "Jordan",
+    "countryPrefix": "962"
+  },
+  "KZ": {
+    "countryName": "Kazakhstan",
+    "countryPrefix": "7"
+  },
+  "KE": {
+    "countryName": "Kenya",
+    "countryPrefix": "254"
+  },
+  "KI": {
+    "countryName": "Kiribati",
+    "countryPrefix": "686"
+  },
+  "XK": {
+    "countryName": "Kosovo",
+    "countryPrefix": "381"
+  },
+  "KW": {
+    "countryName": "Kuwait",
+    "countryPrefix": "965"
+  },
+  "KG": {
+    "countryName": "Kyrgyzstan",
+    "countryPrefix": "996"
+  },
+  "LA": {
+    "countryName": "Laos",
+    "countryPrefix": "856"
+  },
+  "LV": {
+    "countryName": "Latvia",
+    "countryPrefix": "371"
+  },
+  "LB": {
+    "countryName": "Lebanon",
+    "countryPrefix": "961"
+  },
+  "LS": {
+    "countryName": "Lesotho",
+    "countryPrefix": "266"
+  },
+  "LR": {
+    "countryName": "Liberia",
+    "countryPrefix": "231"
+  },
+  "LY": {
+    "countryName": "Libya",
+    "countryPrefix": "218"
+  },
+  "LI": {
+    "countryName": "Liechtenstein",
+    "countryPrefix": "423"
+  },
+  "LT": {
+    "countryName": "Lithuania",
+    "countryPrefix": "370"
+  },
+  "LU": {
+    "countryName": "Luxembourg",
+    "countryPrefix": "352"
+  },
+  "MO": {
+    "countryName": "Macau",
+    "countryPrefix": "853"
+  },
+  "MK": {
+    "countryName": "Macedonia",
+    "countryPrefix": "389"
+  },
+  "MG": {
+    "countryName": "Madagascar",
+    "countryPrefix": "261"
+  },
+  "MW": {
+    "countryName": "Malawi",
+    "countryPrefix": "265"
+  },
+  "MY": {
+    "countryName": "Malaysia",
+    "countryPrefix": "60"
+  },
+  "MV": {
+    "countryName": "Maldives",
+    "countryPrefix": "960"
+  },
+  "ML": {
+    "countryName": "Mali",
+    "countryPrefix": "223"
+  },
+  "MT": {
+    "countryName": "Malta",
+    "countryPrefix": "356"
+  },
+  "MH": {
+    "countryName": "Marshall Islands",
+    "countryPrefix": "692"
+  },
+  "MQ": {
+    "countryName": "Martinique",
+    "countryPrefix": "596"
+  },
+  "MR": {
+    "countryName": "Mauritania",
+    "countryPrefix": "222"
+  },
+  "MU": {
+    "countryName": "Mauritius",
+    "countryPrefix": "230"
+  },
+  "YT": {
+    "countryName": "Mayotte",
+    "countryPrefix": "262"
+  },
+  "MX": {
+    "countryName": "Mexico",
+    "countryPrefix": "52"
+  },
+  "MD": {
+    "countryName": "Moldova",
+    "countryPrefix": "373"
+  },
+  "MC": {
+    "countryName": "Monaco",
+    "countryPrefix": "377"
+  },
+  "MN": {
+    "countryName": "Mongolia",
+    "countryPrefix": "976"
+  },
+  "ME": {
+    "countryName": "Montenegro",
+    "countryPrefix": "382"
+  },
+  "MS": {
+    "countryName": "Montserrat",
+    "countryPrefix": "1"
+  },
+  "MA": {
+    "countryName": "Morocco",
+    "countryPrefix": "212"
+  },
+  "MZ": {
+    "countryName": "Mozambique",
+    "countryPrefix": "258"
+  },
+  "NA": {
+    "countryName": "Namibia",
+    "countryPrefix": "264"
+  },
+  "NR": {
+    "countryName": "Nauru",
+    "countryPrefix": "674"
+  },
+  "NP": {
+    "countryName": "Nepal",
+    "countryPrefix": "977"
+  },
+  "NL": {
+    "countryName": "Netherlands",
+    "countryPrefix": "31"
+  },
+  "AN": {
+    "countryName": "Netherlands Antilles",
+    "countryPrefix": "599"
+  },
+  "NC": {
+    "countryName": "New Caledonia",
+    "countryPrefix": "687"
+  },
+  "NZ": {
+    "countryName": "New Zealand",
+    "countryPrefix": "64"
+  },
+  "NI": {
+    "countryName": "Nicaragua",
+    "countryPrefix": "505"
+  },
+  "NE": {
+    "countryName": "Niger",
+    "countryPrefix": "227"
+  },
+  "NG": {
+    "countryName": "Nigeria",
+    "countryPrefix": "234"
+  },
+  "NU": {
+    "countryName": "Niue",
+    "countryPrefix": "683"
+  },
+  "NF": {
+    "countryName": "Norfolk Island",
+    "countryPrefix": "672"
+  },
+  "KP": {
+    "countryName": "North Korea",
+    "countryPrefix": "850"
+  },
+  "MP": {
+    "countryName": "Northern Mariana Islands",
+    "countryPrefix": "1"
+  },
+  "NO": {
+    "countryName": "Norway",
+    "countryPrefix": "47"
+  },
+  "OM": {
+    "countryName": "Oman",
+    "countryPrefix": "968"
+  },
+  "PK": {
+    "countryName": "Pakistan",
+    "countryPrefix": "92"
+  },
+  "PW": {
+    "countryName": "Palau",
+    "countryPrefix": "680"
+  },
+  "PS": {
+    "countryName": "Palestine",
+    "countryPrefix": "970"
+  },
+  "PA": {
+    "countryName": "Panama",
+    "countryPrefix": "507"
+  },
+  "PG": {
+    "countryName": "Papua New Guinea",
+    "countryPrefix": "675"
+  },
+  "PY": {
+    "countryName": "Paraguay",
+    "countryPrefix": "595"
+  },
+  "PE": {
+    "countryName": "Peru",
+    "countryPrefix": "51"
+  },
+  "PH": {
+    "countryName": "Philippines",
+    "countryPrefix": "63"
+  },
+  "PL": {
+    "countryName": "Poland",
+    "countryPrefix": "48"
+  },
+  "PT": {
+    "countryName": "Portugal",
+    "countryPrefix": "351"
+  },
+  "PR": {
+    "countryName": "Puerto Rico",
+    "countryPrefix": "1"
+  },
+  "QA": {
+    "countryName": "Qatar",
+    "countryPrefix": "974"
+  },
+  "CG": {
+    "countryName": "Republic of the Congo",
+    "countryPrefix": "242"
+  },
+  "RE": {
+    "countryName": "R\u00e9union",
+    "countryPrefix": "262"
+  },
+  "RO": {
+    "countryName": "Romania",
+    "countryPrefix": "40"
+  },
+  "RU": {
+    "countryName": "Russia",
+    "countryPrefix": "7"
+  },
+  "RW": {
+    "countryName": "Rwanda",
+    "countryPrefix": "250"
+  },
+  "BL": {
+    "countryName": "Saint Barth\u00e9lemy",
+    "countryPrefix": "590"
+  },
+  "SH": {
+    "countryName": "Saint Helena",
+    "countryPrefix": "290"
+  },
+  "KN": {
+    "countryName": "Saint Kitts and Nevis",
+    "countryPrefix": "1"
+  },
+  "MF": {
+    "countryName": "Saint Martin",
+    "countryPrefix": "590"
+  },
+  "PM": {
+    "countryName": "Saint Pierre and Miquelon",
+    "countryPrefix": "508"
+  },
+  "VC": {
+    "countryName": "Saint Vincent and the Grenadines",
+    "countryPrefix": "1"
+  },
+  "WS": {
+    "countryName": "Samoa",
+    "countryPrefix": "685"
+  },
+  "SM": {
+    "countryName": "San Marino",
+    "countryPrefix": "378"
+  },
+  "ST": {
+    "countryName": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+    "countryPrefix": "239"
+  },
+  "SA": {
+    "countryName": "Saudi Arabia",
+    "countryPrefix": "966"
+  },
+  "SN": {
+    "countryName": "Senegal",
+    "countryPrefix": "221"
+  },
+  "RS": {
+    "countryName": "Serbia",
+    "countryPrefix": "381"
+  },
+  "SC": {
+    "countryName": "Seychelles",
+    "countryPrefix": "248"
+  },
+  "SL": {
+    "countryName": "Sierra Leone",
+    "countryPrefix": "232"
+  },
+  "SG": {
+    "countryName": "Singapore",
+    "countryPrefix": "65"
+  },
+  "SK": {
+    "countryName": "Slovakia",
+    "countryPrefix": "421"
+  },
+  "SI": {
+    "countryName": "Slovenia",
+    "countryPrefix": "386"
+  },
+  "SB": {
+    "countryName": "Solomon Islands",
+    "countryPrefix": "677"
+  },
+  "SO": {
+    "countryName": "Somalia",
+    "countryPrefix": "252"
+  },
+  "ZA": {
+    "countryName": "South Africa",
+    "countryPrefix": "27"
+  },
+  "KR": {
+    "countryName": "South Korea",
+    "countryPrefix": "82"
+  },
+  "ES": {
+    "countryName": "Spain",
+    "countryPrefix": "34"
+  },
+  "LK": {
+    "countryName": "Sri Lanka",
+    "countryPrefix": "94"
+  },
+  "LC": {
+    "countryName": "St. Lucia",
+    "countryPrefix": "1"
+  },
+  "SD": {
+    "countryName": "Sudan",
+    "countryPrefix": "249"
+  },
+  "SR": {
+    "countryName": "Suriname",
+    "countryPrefix": "597"
+  },
+  "SZ": {
+    "countryName": "Swaziland",
+    "countryPrefix": "268"
+  },
+  "SE": {
+    "countryName": "Sweden",
+    "countryPrefix": "46"
+  },
+  "CH": {
+    "countryName": "Switzerland",
+    "countryPrefix": "41"
+  },
+  "SY": {
+    "countryName": "Syria",
+    "countryPrefix": "963"
+  },
+  "TW": {
+    "countryName": "Taiwan",
+    "countryPrefix": "886"
+  },
+  "TJ": {
+    "countryName": "Tajikistan",
+    "countryPrefix": "992"
+  },
+  "TZ": {
+    "countryName": "Tanzania",
+    "countryPrefix": "255"
+  },
+  "TH": {
+    "countryName": "Thailand",
+    "countryPrefix": "66"
+  },
+  "BS": {
+    "countryName": "The Bahamas",
+    "countryPrefix": "1"
+  },
+  "GM": {
+    "countryName": "The Gambia",
+    "countryPrefix": "220"
+  },
+  "TL": {
+    "countryName": "Timor-Leste",
+    "countryPrefix": "670"
+  },
+  "TG": {
+    "countryName": "Togo",
+    "countryPrefix": "228"
+  },
+  "TK": {
+    "countryName": "Tokelau",
+    "countryPrefix": "690"
+  },
+  "TO": {
+    "countryName": "Tonga",
+    "countryPrefix": "676"
+  },
+  "TT": {
+    "countryName": "Trinidad and Tobago",
+    "countryPrefix": "1"
+  },
+  "TN": {
+    "countryName": "Tunisia",
+    "countryPrefix": "216"
+  },
+  "TR": {
+    "countryName": "Turkey",
+    "countryPrefix": "90"
+  },
+  "TM": {
+    "countryName": "Turkmenistan",
+    "countryPrefix": "993"
+  },
+  "TC": {
+    "countryName": "Turks and Caicos Islands",
+    "countryPrefix": "1"
+  },
+  "TV": {
+    "countryName": "Tuvalu",
+    "countryPrefix": "688"
+  },
+  "UG": {
+    "countryName": "Uganda",
+    "countryPrefix": "256"
+  },
+  "UA": {
+    "countryName": "Ukraine",
+    "countryPrefix": "380"
+  },
+  "AE": {
+    "countryName": "United Arab Emirates",
+    "countryPrefix": "971"
+  },
+  "GB": {
+    "countryName": "United Kingdom",
+    "countryPrefix": "44"
+  },
+  "US": {
+    "countryName": "United States",
+    "countryPrefix": "1"
+  },
+  "UY": {
+    "countryName": "Uruguay",
+    "countryPrefix": "598"
+  },
+  "VI": {
+    "countryName": "US Virgin Islands",
+    "countryPrefix": "1"
+  },
+  "UZ": {
+    "countryName": "Uzbekistan",
+    "countryPrefix": "998"
+  },
+  "VU": {
+    "countryName": "Vanuatu",
+    "countryPrefix": "678"
+  },
+  "VA": {
+    "countryName": "Vatican City",
+    "countryPrefix": "39"
+  },
+  "VE": {
+    "countryName": "Venezuela",
+    "countryPrefix": "58"
+  },
+  "VN": {
+    "countryName": "Vietnam",
+    "countryPrefix": "84"
+  },
+  "WF": {
+    "countryName": "Wallis and Futuna",
+    "countryPrefix": "681"
+  },
+  "YE": {
+    "countryName": "Yemen",
+    "countryPrefix": "967"
+  },
+  "ZM": {
+    "countryName": "Zambia",
+    "countryPrefix": "260"
+  },
+  "ZW": {
+    "countryName": "Zimbabwe",
+    "countryPrefix": "263"
+  }
+}

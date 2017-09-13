@@ -1,0 +1,56 @@
+@import '../colors';
+
+.Toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Toolbar-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.Toolbar-left:hover {
+  opacity: 0.6;
+}
+
+.Toolbar-logo {
+  min-width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
+  border-radius: 10px;
+  margin-right: 20px;
+  background-image: url("/static/logo.webp");
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 767px) {
+  .Toolbar-logo {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .Toolbar-logo {
+    background-image: url("/static/logo@2x.webp");
+  }
+}
+
+.Toolbar-title {
+  margin: 0px;
+  font-weight: 400;
+}
+
+.Toolbar-links {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}

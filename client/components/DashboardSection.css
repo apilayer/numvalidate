@@ -1,0 +1,59 @@
+@import '../colors';
+
+.DashboardSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .DashboardSection-header {
+  }
+}
+
+.DashboardSection-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 767px) {
+  .DashboardSection-header {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+
+.DashboardSection-header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 767px) {
+  .DashboardSection-header-left {
+    margin-bottom: 20px;
+  }
+}
+
+.DashboardSection-header-left > h1 {
+  margin-bottom: 10px;
+}
+
+.DashboardSection-header-left > p {
+  color: var(--color-text-2);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0px;
+}
+
+.DashboardSection-header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .DashboardSection-header-right {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,59 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+.env.server
+.env.client
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+client/.next
+
+dump.rdb
+
+# DOCS
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+*.DS_STORE
+build/
+.cache
+.vagrant
+.sass-cache
+
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+.idea/
+
+.bundle
+.gems
+
+.vscode/

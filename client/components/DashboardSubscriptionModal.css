@@ -1,0 +1,24 @@
+@import '../colors';
+
+.SubscriptionChangeModal {
+  width: 390px;
+  color: white;
+}
+
+.SubscriptionChangeModal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.SubscriptionChangeModal-button {
+  margin-left: 30px;
+  border: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .SubscriptionChangeModal {
+    width: 100%;
+  }
+}

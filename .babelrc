@@ -1,0 +1,54 @@
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    [
+      "wrap-in-js",
+      {
+        "extensions": [
+          "css$"
+        ]
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        [
+          "inline-dotenv",
+          {
+            "path": ".env.client"
+          }
+        ]
+      ]
+    },
+    "production": {
+      "plugins": [
+        [
+          "transform-inline-environment-variables",
+          {
+            "include": [
+              "REACT_APP_NODE_ENV",
+              "REACT_APP_AUTH0_DOMAIN",
+              "REACT_APP_AUTH0_CLIENT_ID",
+              "REACT_APP_PUBLIC_URL",
+              "REACT_APP_DASHBOARD_URL",
+              "REACT_APP_DOCS_URL",
+              "REACT_APP_STRIPE_PUBLIC_KEY",
+              "REACT_APP_STRIPE_FREE_PLAN_ID",
+              "REACT_APP_STRIPE_PRO_PLAN_ID",
+              "REACT_APP_STRIPE_PRO_PLAN_AMOUNT",
+              "REACT_APP_MAX_API_TOKENS_PER_USER",
+              "REACT_APP_RATE_LIMIT_FOR_UNAUTHENTICATED_REQUESTS",
+              "REACT_APP_RATE_LIMIT_FOR_FREE_USER_REQUESTS",
+              "REACT_APP_RATE_LIMIT_FOR_PRO_USER_REQUESTS",
+              "REACT_APP_EMAIL_ADDRESS",
+              "REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID"
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}
