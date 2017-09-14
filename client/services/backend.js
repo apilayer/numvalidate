@@ -13,7 +13,7 @@ const callBackendEndpoint = async (method: any, endpoint: string, body: ?Object)
     Authorization: `Bearer ${accessToken}`,
     'Content-Type': 'application/json',
   };
-  const url = `${window.location.endpoint}${endpoint}`;
+  const url = `${window.location.origin}${endpoint}`;
   const stringifiedBody =
     method === 'GET' || method === 'HEAD' ? undefined : JSON.stringify(body || {});
   const response = await fetch(url, {
