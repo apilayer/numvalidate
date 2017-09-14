@@ -59,6 +59,7 @@ class Dashboard extends Component<Props, State> {
   }
 
   _initialize = async () => {
+    authService.initialize();
     let error;
     // First, ensure that a token exists by checking the page url hash (if the
     // user has just completed a succesfull login you'll find here the token).
@@ -107,16 +108,16 @@ class Dashboard extends Component<Props, State> {
 
   _handleLogout = () => {
     authService.logout();
-    window.location.replace(keys.PUBLIC_URL);
+    window.location.replace(`${window.location.origin}`);
   };
 
   _handleToolbarTitleClick = () => {
-    window.location.href = keys.PUBLIC_URL;
+    window.location.href = `${window.location.origin}`;
   };
 
   _handleErrorButtonClick = () => {
     authService.logout();
-    window.location.replace(keys.PUBLIC_URL);
+    window.location.replace(`${window.location.origin}`);
   };
 
   _showSnackbar = async (error: Error) => {

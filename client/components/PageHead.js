@@ -1,7 +1,6 @@
 /* @flow */
 import React from 'react';
 import Head from 'next/head';
-import keys from '../config/keys';
 import style from './PageHead.css';
 
 type Props = {
@@ -16,7 +15,7 @@ const PageHead = (props: Props) => {
       <meta name={'description'} content={'NumValidate'} />
       <meta name={'author'} content={'Mazzarolo Matteo'} />
       <meta name={'viewport'} content={'width=device-width, initial-scale=1'} />
-      <meta property={'og:url'} content={keys.PUBLIC_URL} />
+      <meta property={'og:url'} content={'https://numvalidate.com'} />
       <meta property={'og:title'} content={'NumValidate'} />
       <meta property={'og:description'} content={'Free phone number validation REST API'} />
       <meta property={'og:image'} content={'/static/logo.png'} />

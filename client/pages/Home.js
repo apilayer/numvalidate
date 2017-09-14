@@ -22,16 +22,17 @@ class Home extends Component<Props, void> {
   }
 
   componentDidMount() {
+    authService.initialize();
     analyticsService.initialize();
     analyticsService.pageView();
   }
 
   _handleToolbarTitleClick = () => {
-    window.location.href = keys.PUBLIC_URL;
+    window.location.href = `${window.location.origin}`;
   };
 
   _handleDashboardClick = () => {
-    window.location.href = keys.DASHBOARD_URL;
+    window.location.href = `${window.location.origin}/dashboard`;
   };
 
   _handleLoginClick = () => {
@@ -169,7 +170,7 @@ class Home extends Component<Props, void> {
               Simply put: the rate limit ensures an high quality of service for all API consumers.<br />{' '}
               To enjoy the default rate limit of {keys.RATE_LIMIT_FOR_FREE_USER_REQUESTS}
               requests per day, you'll need to sign-up for a free account and then head to the{' '}
-              <a href={keys.DASHBOARD_URL}>dashboard</a> to generate an API keys.
+              <a onClick={this._handleDashboardClick}>dashboard</a> to generate an API keys.
             </p>
           </div>
           <div className={'Home-faq-question'}>

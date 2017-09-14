@@ -7,15 +7,8 @@ export default {
   IS_ENV_PRODUCTION: process.env.NODE_ENV === 'production',
   AUTH0_DOMAIN: process.env.REACT_APP_AUTH0_DOMAIN,
   AUTH0_CLIENT_ID: process.env.REACT_APP_AUTH0_CLIENT_ID,
-  AUTH0_REDIRECT_URI: process.env.REACT_APP_AUTH0_REDIRECT_URI,
   AUTH0_AUDIENCE: process.env.REACT_APP_AUTH0_AUDIENCE,
-  PUBLIC_URL: process.env.REACT_APP_PUBLIC_URL || 'http://localhost:1337',
-  DASHBOARD_URL:
-    process.env.REACT_APP_DASHBOARD_URL ||
-    `${process.env.REACT_APP_PUBLIC_URL || 'http://localhost:1337'}/dashboard`,
-  DOCS_URL:
-    process.env.REACT_APP_DOCS_URL ||
-    `${process.env.REACT_APP_PUBLIC_URL || 'http://localhost:1337'}/docs`,
+  DOCS_URL: process.env.REACT_APP_DOCS_URL || '',
   STRIPE_PUBLIC_KEY: process.env.REACT_APP_STRIPE_PUBLIC_KEY,
   STRIPE_FREE_PLAN_ID: process.env.REACT_APP_STRIPE_FREE_PLAN_ID,
   STRIPE_PRO_PLAN_ID: process.env.REACT_APP_STRIPE_PRO_PLAN_ID,

@@ -1,8 +1,4 @@
 // @flow
-import keys from '../config/keys';
-
-const BACKEND_API_BASE_URL = keys.PUBLIC_URL;
-
 let accessToken = null;
 
 const initialize = (token: string) => {
@@ -17,7 +13,7 @@ const callBackendEndpoint = async (method: any, endpoint: string, body: ?Object)
     Authorization: `Bearer ${accessToken}`,
     'Content-Type': 'application/json',
   };
-  const url = `${BACKEND_API_BASE_URL}${endpoint}`;
+  const url = `${window.location.endpoint}${endpoint}`;
   const stringifiedBody =
     method === 'GET' || method === 'HEAD' ? undefined : JSON.stringify(body || {});
   const response = await fetch(url, {
@@ -35,11 +31,6 @@ const callBackendEndpoint = async (method: any, endpoint: string, body: ?Object)
 
 const getUser = async () => {
   const res = await callBackendEndpoint('GET', '/user');
-  return res.data;
-};
-
-const getPlans = async () => {
-  const res = await callBackendEndpoint('GET', '/plans');
   return res.data;
 };
 
@@ -76,7 +67,6 @@ const updateUserPaymentInfo = async (stripeToken: string) => {
 export default {
   initialize,
   getUser,
-  getPlans,
   createUserApiToken,
   deleteUserApiToken,
   updateUserSubscription,

@@ -5,14 +5,18 @@ import keys from '../config/keys';
 
 const ACCESS_TOKEN_COOKIE_NAME = 'numvalidateAccessToken';
 
-const auth0WebAuth = new Auth0.WebAuth({
-  domain: keys.AUTH0_DOMAIN,
-  clientID: keys.AUTH0_CLIENT_ID,
-  redirectUri: keys.AUTH0_REDIRECT_URI,
-  audience: keys.AUTH0_AUDIENCE,
-  responseType: 'token id_token',
-  scope: 'openid',
-});
+let auth0WebAuth;
+
+const initialize = () => {
+  auth0WebAuth = new Auth0.WebAuth({
+    domain: keys.AUTH0_DOMAIN,
+    clientID: keys.AUTH0_CLIENT_ID,
+    redirectUri: `${window.location.origin}/dashboard`,
+    audience: keys.AUTH0_AUDIENCE,
+    responseType: 'token id_token',
+    scope: 'openid',
+  });
+};
 
 const setAuthCookie = (accessToken: string, tokenExpiresIn: number) => {
   if (!process.browser) {
@@ -87,4 +91,5 @@ export default {
   logout,
   getAccessToken,
   isAuthenticated,
+  initialize,
 };
