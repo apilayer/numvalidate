@@ -4,6 +4,7 @@ const helmetMiddleware = require('koa-helmet');
 const koaBouncer = require('koa-bouncer');
 const koaRouter = require('koa-router')();
 const koaConnect = require('koa-connect');
+const sendfile = require('koa-sendfile');
 const compression = require('compression');
 const next = require('next');
 const getIpAddressMiddleware = require('./middlewares/getIpAddress');
@@ -83,6 +84,13 @@ nextApp.prepare().then(() => {
       checkStripeCustomerMiddleware,
       userRoutes.updateUserSource
     )
+    .get('/robots.txt', async (ctx, next) => {
+      if (keys.EXECUTION_ENV === 'production') {
+        await sendfile(ctx, './client/static/robots-production.txt');
+      } else {
+        await sendfile(ctx, './client/static/robots-development.txt');
+      }
+    })
     .get('/dashboard', async (ctx, next) => {
       ctx.res.statusCode = 200;
       await nextApp.render(ctx.req, ctx.res, '/Dashboard', ctx.query);
