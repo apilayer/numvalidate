@@ -12,7 +12,12 @@ const PageHead = (props: Props) => {
     <Head>
       <title>{props.title}</title>
       <meta charset={'utf-8'} />
-      <meta name={'description'} content={'NumValidate'} />
+      <meta
+        name={'description'}
+        content={
+          'Free and open source REST API that provides a simple yet effective way to validate and format a phone number.'
+        }
+      />
       <meta name={'author'} content={'Mazzarolo Matteo'} />
       <meta name={'viewport'} content={'width=device-width, initial-scale=1'} />
       <meta property={'og:url'} content={'https://numvalidate.com'} />

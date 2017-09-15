@@ -42,7 +42,7 @@ class Home extends Component<Props, void> {
   render() {
     return (
       <div className={'Home'}>
-        <PageHead title={'NumValidate'} />
+        <PageHead title={'NumValidate: Phone number validation REST API'} />
         <style jsx global>
           {globalStyle}
         </style>
