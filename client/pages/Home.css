@@ -265,11 +265,30 @@
   align-items: center;
 }
 
+.Home-footer-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Home-footer-left > a {
+  margin-left: 12px;
+}
+
 @media only screen and (max-width: 767px) {
   .Home-footer {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+  }
+
+  .Home-footer-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .Home-footer-left > a {
+    margin-left: initial;
   }
 }
 
