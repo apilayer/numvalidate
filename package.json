@@ -1,13 +1,30 @@
 {
-  "name": "numvalidate",
+  "name": "numvalidate-app",
   "version": "1.0.0",
   "description": "Phone number validation REST API",
   "main": "index.js",
   "author": "Mazzarolo Matteo",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "engines": {
     "node": "8.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmazzarolo/numvalidate-app.git"
+  },
+  "keywords": [
+    "numvalidate",
+    "phone",
+    "number",
+    "validation",
+    "formatting",
+    "rest",
+    "api"
+  ],
+  "bugs": {
+    "url": "https://github.com/mmazzarolo/numvalidate-app/issues"
+  },
+  "homepage": "https://github.com/mmazzarolo/numvalidate-app#readme",
   "scripts": {
     "start": "NODE_ENV=production node server/index.js",
     "heroku-postbuild": "NODE_ENV=production npm run build",
