@@ -4,19 +4,27 @@ require('winston-papertrail').Papertrail;
 
 const papertrailEnabled = keys.IS_ENV_PRODUCTION && keys.PAPERTRAIL_HOST && keys.PAPERTRAIL_PORT;
 
-const logger = new winston.Logger();
+const transports = [];
 
-logger.add(winston.transports.Console, {
-  colorize: true,
-  prettyPrint: true,
-});
+transports.push(
+  new winston.transports.Console({
+    colorize: true,
+    prettyPrint: true,
+  })
+);
 
 if (papertrailEnabled) {
-  logger.add(winston.transports.Papertrail, {
-    host: keys.PAPERTRAIL_HOST,
-    port: keys.PAPERTRAIL_PORT,
-    colorize: true,
-  });
+  transports.push(
+    new winston.transports.Papertrail({
+      host: keys.PAPERTRAIL_HOST,
+      port: keys.PAPERTRAIL_PORT,
+      colorize: true,
+    })
+  );
 }
+
+const logger = new winston.Logger({
+  transports: transports,
+});
 
 module.exports = logger;

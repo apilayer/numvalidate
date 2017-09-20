@@ -48,7 +48,7 @@ const filterObject = (originalObj, whiteList, bodyBlacklist) => {
 };
 
 module.exports = async (ctx, next) => {
-  if (!ctx.originalUrl.startsWith('/api/')) {
+  if (!ctx.originalUrl.startsWith('/api') && !ctx.originalUrl.startsWith('/user')) {
     return await next();
   }
   const start = new Date();

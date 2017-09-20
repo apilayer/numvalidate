@@ -45,7 +45,7 @@ const SENTRY_DNS = process.env.SENTRY_DNS;
 const EXECUTION_ENV = process.env.EXECUTION_ENV || 'development';
 
 const PAPERTRAIL_HOST = process.env.PAPERTRAIL_HOST;
-const PAPERTRAIL_PORT = process.env.PAPERTRAIL_PORT;
+const PAPERTRAIL_PORT = commonUtils.toInt(process.env.PAPERTRAIL_PORT, 9000);
 
 module.exports = {
   AUTH0_MANAGEMENT_API_AUDIENCE,
