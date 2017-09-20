@@ -150,7 +150,7 @@ class DashboardSubscription extends Component<Props, State> {
               onCancelClick={this._hideModal}
               onStripeTokenReceived={(token: string) =>
                 this._updateSubscriptionPlan(keys.STRIPE_PRO_PLAN_ID || '', token)}
-              amount={Number(keys.STRIPE_PRO_PLAN_AMOUNT)}
+              amount={keys.STRIPE_PRO_PLAN_AMOUNT}
             />
           </Modal>
         )}

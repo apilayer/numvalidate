@@ -42,7 +42,7 @@ export default {
   PAYMENT_INFO_FREE_PLAN_AMOUNT: `€0/month`,
   PAYMENT_INFO_FREE_PLAN_DESCRIPTION: `${keys.RATE_LIMIT_FOR_FREE_USER_REQUESTS ||
     ''} daily API requests.`,
-  PAYMENT_INFO_PRO_PLAN_AMOUNT: `€${keys.STRIPE_PRO_PLAN_AMOUNT || ''}/month`,
+  PAYMENT_INFO_PRO_PLAN_AMOUNT: `€${keys.STRIPE_PRO_PLAN_AMOUNT / 100 || ''}/month`,
   PAYMENT_INFO_PRO_PLAN_DESCRIPTION: `${keys.RATE_LIMIT_FOR_PRO_USER_REQUESTS ||
     ''} daily API requests. Email Support.`,
   PAYMENT_INFO_FREE_MODAL_TITLE: 'Subscription change',
