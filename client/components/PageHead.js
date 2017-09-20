@@ -22,7 +22,7 @@ const PageHead = (props: Props) => {
       <meta name={'viewport'} content={'width=device-width, initial-scale=1'} />
       <meta property={'og:url'} content={'https://numvalidate.com'} />
       <meta property={'og:title'} content={'NumValidate'} />
-      <meta property={'og:description'} content={'Free phone number validation REST API'} />
+      <meta property={'og:description'} content={'Open Source phone number validation REST API'} />
       <meta property={'og:image'} content={'/static/logo.png'} />
       <meta name={'theme-color'} content={'#21272f'} />
       <link
