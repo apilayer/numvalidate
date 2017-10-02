@@ -1,44 +1,125 @@
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 
 &nbsp;
 
 # NumValidate  <img src="./.github/logo-rounded.png" width="110" align="left">
-Open Source phone number validation REST API
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 &nbsp;
 
 NumValidate is a phone validation REST API powered by Google LibPhoneNumber, a phone number formatting and parsing library released by Google, originally developed for (and currently used in) Google's Android mobile phone operating system, which uses several rigorous rules for parsing, formatting, and validating phone numbers for all countries/regions of the world.
 
 NumValidate is open source, and in this repository you'll be able to find everything you'll need to setup your own NumValidate platform.  
-
 &nbsp;
 
-## The app stack
+<p align="center" margin-bottom="0">
+  <a href="https://numvalidate.com" target="_blank">
+    <img alt="Numvalidate" width="auto" height="auto" src="./.github/website-screenshot.png">
+  </a>
+</p>
+<p align="center">
+  <a href="https://www.numvalidate.com">numvalidate.com</a>
+</p>
 
-### Node  <img src="./.github/logo-node.png" height="80" align="left">
-Node  
-  
-### React  <img src="./.github/logo-react.png" height="80" align="left">
-React  
-  
-### Koa  <img src="./.github/logo-koa.png" height="80" align="left">
-Koa  
-  
-### Next  <img src="./.github/logo-next.png" height="80" align="left">
-Next  
+## Overview
 
-### Heroku  <img src="./.github/logo-heroku.svg" height="80" align="left">
-Heroku  
-  
-### Auth0  <img src="./.github/logo-auth0.png" height="80" align="left">
-Auth0  
-  
-### Stripe  <img src="./.github/logo-stripe.png" height="80" align="left">
-Stripe  
-  
-&nbsp;
+### Stack
+- Node.js - (Web Server)
+- React - (Website and dashboard UI)
+- Next - (Routing, Server Side Rendering and code splitting)
+- Koa - (Web App Server)
+- Redis - (Caching)
+- Slate - (API documentation)
+- Flow - (Static Types in the Dashboard)
+- ESLint - (JS Best Practices/Code Highlighting)
 
-## Acknowledgements:
+### External services and platforms
+- [Heroku](https://www.heroku.com/) - (App deployment)
+- [Auth0](https://auth0.com/) - (Authentication and authorization)
+- [Stripe](https://stripe.com) - (Payment processing)
+- [Papertrail](https://papertrailapp.com/) - (Log management)
+- [Sentry](https://sentry.io) - (Error tracking and reporting)
 
-We are grateful to the authors of existing related projects for their ideas and collaboration:
-- [@mmazzarolo](https://github.com/mmazzarolo)
+## Architecture 
+
+<p align="center">
+  <img alt="Hacker News Clone Architecture Overview" width="auto" height="400px" src="docs/HN-Clone-Architecture-overview.png">
+</p>
+
+### Directory Structure
+
+### Server
+The server is a Node application powered by Koa, responsible of handling all the API requests and rendering the website/dashboard (thanks to Next).  
+
+### Website
+
+### Dashboard
+
+## How To Start
+
+### Auth0 Setup
+To run this project you'll need an 
+
+### Stripe Setup
+
+### Setup
+
+Running the app in dev mode is fully featured including *hot module reloading*:
+
+`npm install`
+
+`npm run start-dev`
+
+To run in production mode:
+
+`npm run build && npm start`
+
+### Configuration
+This project makes an heave use of environment variables for its configuration, so, if you want to run the project locally, you are adviced to include a `.env.server` and a `env.client` file in your project root (I use two dotenv files instead of one to keep the things clearer while developing).  
+
+Client environment variables:  
+  
+| Environment Variable | Default | Description |
+| ------------- | ------------- | ------------- |
+| `REACT_APP_AUTH0_AUDIENCE` | *REQUIRED* | Auth0 audience |
+| `REACT_APP_AUTH0_CLIENT_ID` | *REQUIRED* |  Auth0 ClientID |
+| `REACT_APP_AUTH0_DOMAIN` | *REQUIRED* |  Auth0 domain |
+| `REACT_APP_RATE_LIMIT_FOR_UNAUTHENTICATED_REQUESTS` | 100 | Rate limit for unauthenticated users |
+| `REACT_APP_RATE_LIMIT_FOR_FREE_USER_REQUESTS` | 1000 | Rate limit for free users |
+| `REACT_APP_RATE_LIMIT_FOR_PRO_USER_REQUESTS` | 100000 | Rate limit for pro users |
+| `REACT_APP_STRIPE_FREE_PLAN_ID` | *REQUIRED* | Free plan ID in Stripe |
+| `REACT_APP_STRIPE_PRO_PLAN_ID` | *REQUIRED* | Pro plan ID in Stripe |
+| `REACT_APP_STRIPE_PRO_PLAN_AMOUNT` | 399 | The pro plan subscription amount in Stripe |
+| `REACT_APP_STRIPE_PUBLIC_KEY` | *REQUIRED* | Stripe API public key |
+| `REACT_APP_MAX_API_TOKENS_PER_USER` | 5 | The maximum number of API tokens per user |
+
+Server environment variables:  
+  
+| Environment Variable | Default | Description |
+| ------------- | ------------- | ------------- |
+| `PORT` | 1337| The port where the server will run |
+| `AUTH0_AUDIENCE` | *REQUIRED* | Auth0 audience |
+| `AUTH0_DOMAIN` | *REQUIRED* | Auth0 audience |
+| `AUTH0_ISSUER` | *REQUIRED* | Auth0 audience |
+| `AUTH0_JWKS_URI` | *REQUIRED* | Auth0 audience |
+| `AUTH0_MANAGEMENT_API_AUDIENCE` | *REQUIRED* | Auth0 audience |
+| `AUTH0_MANAGEMENT_API_CLIENT_ID` | *REQUIRED* | Auth0 audience |
+| `AUTH0_MANAGEMENT_API_CLIENT_SECRET` | *REQUIRED* | Auth0 audience |
+| `EXECUTION_ENV` | development | Used mainly for logging infos |
+| `RATE_LIMIT_FOR_UNAUTHENTICATED_REQUESTS` | 100 | Rate limit for unauthenticated users |
+| `RATE_LIMIT_FOR_FREE_USER_REQUESTS` | 1000 | Rate limit for free users |
+| `RATE_LIMIT_FOR_PRO_USER_REQUESTS` | 100000 | Rate limit for pro users |
+| `REDIS_URL` | *REQUIRED* | Redis URL |
+| `STRIPE_FREE_PLAN_ID` | *REQUIRED* | Free plan ID in Stripe |
+| `STRIPE_PRO_PLAN_ID` | *REQUIRED* | Pro plan ID in Stripe |
+| `STRIPE_PUBLIC_KEY` | *REQUIRED* | Stripe API public key |
+| `STRIPE_SECRET_KEY` | *REQUIRED* | Stripe API secret key |
+| `PAPERTRAIL_HOST` | *OPTIONAL* | Papertrail URL |
+| `PAPERTRAIL_PORT` | *OPTIONAL* | Papertrail port |
+| `SENTRY_DSN` | *OPTIONAL* | Sentry DSN |
+
+
+## Contributing
+Pull requests are welcome. File an issue for ideas, conversation or feedback.
+
