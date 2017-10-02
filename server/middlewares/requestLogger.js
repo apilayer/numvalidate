@@ -68,7 +68,7 @@ module.exports = async (ctx, next) => {
 
   logger[level](msg);
 
-  if (keys.SENTRY_DNS && ctx.status >= 400) {
+  if (keys.SENTRY_DSN && ctx.status >= 400) {
     const sentryMsg = `${ctx.status} ${ctx.method} ${ctx.originalUrl} ${_.get(
       ctx,
       'body.error.message',
