@@ -47,16 +47,101 @@ NumValidate is open source, and in this repository you'll be able to find everyt
   <img alt="Hacker News Clone Architecture Overview" width="auto" height="400px" src="docs/HN-Clone-Architecture-overview.png">
 </p>
 
-### Directory Structure
+### The Client
+The client is a React application that exposes the **Home page** and the **Dashboard**, and both pages are rendered server-side thanks to Next. 
 
-### Server
-The server is a Node application powered by Koa, responsible of handling all the API requests and rendering the website/dashboard (thanks to Next).  
+```javascript
+client
+ ├── components // The building blocks of the UI
+ │   ├── Button.css 
+ │   ├── Button.js
+ │   ├── DashboardCreditCard.css
+ │   ├── DashboardCreditCard.js
+ │   └── ...
+ │
+ ├── config
+ │   ├── keys.js // Constants used across the app (mostly are env vars)
+ │   └── strings.js // Almost every string used in the Dashboard
+ │
+ ├── pages // The actual pages (aka containers) server by Next
+ │   ├── Dashboard.css 
+ │   ├── Dashboard.js
+ │   ├── Home.css
+ │   └── Home.js
+ │
+ ├── services
+ │   ├── analytics.js // Simple wrapper over Google Analytics
+ │   ├── auth.js // Auth0 APIs
+ │   └── backend.js // Backend (server) APIs
+ │
+ ├── static // Static assets (favicons, images, robots.txt)
+ │
+ ├── utils // Common utils used in all the app
+ │
+ ├── colors.css // CSS colors variables
+ │
+ ├── globals.css // Global styles
+ │
+ ├── next.config // Babel config injected into Next
+ │
+ ├── postcss.config // PostCSS config injected into Next
+ │
+ └── types.js // Flowtype type definitions
+```     
+### The Server
+The server is a Node application powered by Koa, responsible of handling all the API requests and rendering the website/dashboard.
 
-### Website
+```javascript
+server
+ ├── components // The building blocks of the UI
+ │   ├── Button.css 
+ │   ├── Button.js
+ │   ├── DashboardCreditCard.css
+ │   ├── DashboardCreditCard.js
+ │   └── ...
+ │
+ ├── config
+ │   ├── keys.js // Constants used across the app (mostly are env vars)
+ │   └── strings.js // Almost every string used in the Dashboard
+ │
+ ├── middlewares
+ │   ├── allowCrossDomain.js // CORS setup 
+ │   ├── auth0TokenGenerator.js // Daily Auth0 Management API token generator 
+ │   ├── checkApiToken.js // Validates the request API token
+ │   ├── checkAuthToken.js // Validates the request Auth0 JWT 
+ │   ├── checkMaxRequests.js // Checks the max requests limit of the user
+ │   ├── checkStripeCustomer.js // Verifies that the user initialized in Stripe
+ │   ├── errorHandler.js // Returns a clean response error 
+ │   ├── fetchUserFromAuth0.js // Given the Auth0 JWT gets the user from Auth0 
+ │   ├── getIpAddress.js // Gets the request IP address
+ │   ├── rateLimiter.js // Blocks the request on max requests limit reached
+ │   └── requestLogger.js // Logs the request on console/Papertrail/Sentry
+ │
+ ├── config
+ │   ├── api.js // Phone validation endpoints
+ │   └── user.js // Dashboard endpoints
+ │
+ ├── services
+ │   ├── auth0.js // Auth0 APIs wrapper
+ │   ├── redis.js // Redis queries
+ │   ├── sentry.js // Sentry APIs wrapper
+ │   └── stripe.js // Stripe APIs wrapper
+ │
+ ├── static
+ │   └── countries.json // Phone validation supported countries
+ │
+ ├── utils
+ │   ├── common.js// Common utils used in all the app
+ │   └── logger.js // Winston logger setup
+ │
+ ├── utils // Common utils used in all the app
+ │
+ ├── app.js // App setup
+ │
+ └── index.j // App entry point
+```  
 
-### Dashboard
-
-## How To Start
+## How To Start The Application
 
 ### Auth0 Setup
 To run this project you'll need an 
@@ -65,17 +150,19 @@ To run this project you'll need an
 
 ### Setup
 
-Running the app in dev mode is fully featured including *hot module reloading*:
+Run the app in dev mode (including *hot module reloading*) with:
 
-`npm install`
-
-`npm run start-dev`
+```bash
+npm install
+npm run start-dev
+```
 
 To run in production mode:
 
 `npm run build && npm start`
 
-### Configuration
+### Configuration  
+
 This project makes an heave use of environment variables for its configuration, so, if you want to run the project locally, you are adviced to include a `.env.server` and a `env.client` file in your project root (I use two dotenv files instead of one to keep the things clearer while developing).  
 
 Client environment variables:  
