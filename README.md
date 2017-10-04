@@ -43,10 +43,6 @@ NumValidate is open source, and in this repository you'll be able to find everyt
 
 ## Architecture 
 
-<p align="center">
-  <img alt="Hacker News Clone Architecture Overview" width="auto" height="400px" src="docs/HN-Clone-Architecture-overview.png">
-</p>
-
 ### The Client
 The client is a React application that exposes the **Home page** and the **Dashboard**, and both pages are rendered server-side thanks to Next. 
 
@@ -144,9 +140,12 @@ server
 ## How To Start The Application
 
 ### Auth0 Setup
-To run this project you'll need an 
+To run this project you'll need an Auth0 account.
+WIP.
 
 ### Stripe Setup
+To run this project you'll need a Stripe account.
+WIP.
 
 ### Setup
 
