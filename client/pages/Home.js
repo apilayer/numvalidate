@@ -184,7 +184,7 @@ class Home extends Component<Props, void> {
               </i>{' '}
               be the main way to pay up the infrastructure.<br /> However, this is an open source
               project: You can find all its code on{' '}
-              <a href="https://github.com/mmazzarolo/numvalidate-app">Github</a>, and if you think
+              <a href="https://github.com/mmazzarolo/numvalidate">Github</a>, and if you think
               that the proposed price for the pro plan is too high you're free to install it in your
               own server.<br />
               Payments can be made via Credit Card (Visa, MasterCard, Discover, Diner's Club) and
@@ -222,7 +222,7 @@ class Home extends Component<Props, void> {
           </p>
           <div className={'Home-footer-left'}>
             <a href={`mailto:numvalidateapp@gmail.com?subject=Support`}>Support</a>
-            <a href={`https://github.com/mmazzarolo/numvalidate-app`}>GitHub</a>
+            <a href={`https://github.com/mmazzarolo/numvalidate`}>GitHub</a>
           </div>
         </div>
       </div>
