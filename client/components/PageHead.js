@@ -36,6 +36,14 @@ const PageHead = (props: Props) => {
         property={'og:image'}
         content={'https://numvalidate.com/static/website-screenshot.png'}
       />
+      <meta name={'twitter:image'} content={'https://numvalidate.com/static/logo-rounded.png'} />
+      <meta name={'twitter:title'} content={'NumValidate - Phone number validation REST API'} />
+      <meta
+        name={'twitter:description'}
+        content={
+          'Free and open source REST API that provides a simple yet effective way to validate and format a phone number.'
+        }
+      />
       <meta name={'theme-color'} content={'#21272f'} />
       <link
         rel={'apple-touch-icon'}
