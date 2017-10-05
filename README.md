@@ -188,6 +188,7 @@ Client environment variables:
 | `REACT_APP_STRIPE_PRO_PLAN_AMOUNT` | 399 | The pro plan subscription amount in Stripe |
 | `REACT_APP_STRIPE_PUBLIC_KEY` | *REQUIRED* | Stripe API public key |
 | `REACT_APP_MAX_API_TOKENS_PER_USER` | 5 | The maximum number of API tokens per user |
+| `REACT_APP_GOOGLE_SITE_VERIFICATION` | OPTIONAL | The Google Search Console verification key |
 
 Server environment variables:  
   
