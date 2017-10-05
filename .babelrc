@@ -43,7 +43,8 @@
               "REACT_APP_RATE_LIMIT_FOR_FREE_USER_REQUESTS",
               "REACT_APP_RATE_LIMIT_FOR_PRO_USER_REQUESTS",
               "REACT_APP_EMAIL_ADDRESS",
-              "REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID"
+              "REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID",
+              "REACT_APP_GOOGLE_SITE_VERIFICATION",
             ]
           }
         ]

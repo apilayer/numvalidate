@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react';
 import Head from 'next/head';
+import keys from '../config/keys';
 import style from './PageHead.css';
 
 type Props = {
@@ -18,6 +19,9 @@ const PageHead = (props: Props) => {
           'Free and open source REST API that provides a simple yet effective way to validate and format a phone number.'
         }
       />
+      {keys.GOOGLE_SITE_VERIFICATION && (
+        <meta name={'google-site-verification'} content={keys.GOOGLE_SITE_VERIFICATION} />
+      )}
       <meta name={'author'} content={'Mazzarolo Matteo'} />
       <meta name={'viewport'} content={'width=device-width, initial-scale=1'} />
       <meta property={'og:url'} content={'https://numvalidate.com'} />
