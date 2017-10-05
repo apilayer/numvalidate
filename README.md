@@ -10,7 +10,6 @@
 
 NumValidate is a phone validation REST API powered by Google LibPhoneNumber, a phone number formatting and parsing library released by Google, originally developed for (and currently used in) Google's Android mobile phone operating system, which uses several rigorous rules for parsing, formatting, and validating phone numbers for all countries/regions of the world.
 
-NumValidate is open source, and in this repository you'll be able to find everything you'll need to setup your own NumValidate platform.  
 &nbsp;
 
 <p align="center" margin-bottom="0">
@@ -19,11 +18,14 @@ NumValidate is open source, and in this repository you'll be able to find everyt
   </a>
 </p>
 <p align="center">
-  <a href="https://www.numvalidate.com">numvalidate.com</a>
+  <a href="https://numvalidate.com">numvalidate.com</a>
 </p>
 
 ## Overview
 
+In this repository you'll be able to find everything you'll need to setup your own NumValidate platform.  
+
+Even if you're not interested in phone number validation, I suggest you to take a look around here, since **you can easily customize NumValidate to expose any kind of API you like**: the phone validation APIs consists in [> 200 line of codes](https://github.com/mmazzarolo/numvalidate/blob/master/server/routes/api.js), while the remaining code supports the authentication, authorization, plan subscription, plan payment and API tokens management.
 
 ### Features
 - Plain simple phone number validation rest API, powered by [Google LibPhoneNumber](https://github.com/googlei18n/libphonenumber) and [documented](https://github.com/mmazzarolo/numvalidate-docs) with [Slate](https://github.com/lord/slate)
@@ -164,12 +166,51 @@ server
 ## How To Start The Application
 
 ### Auth0 Setup
-To run this project you'll need an Auth0 account.
-WIP.
+To run this project you'll need an [Auth0](https://auth0.com/) account.  
+Since this is a complex process, I'll detail it by using the naming convention I followed with NumValidate, by supposing that your app name is **"SuperApp"**
+
+Please make sure all the items in the following checklist are marked before running this project in development:
+
+- [ ] Create an account on [Auth0](https://auth0.com/) and head to the Auth0 [dashboard](https://manage.auth0.com/)
+- [ ] Create a new tenant (which basically is a sub-account) that you'll use for development (by clicking on your icon in the top right corner and selecting **Create tenant**) and name it **"superapp-dev"**
+- [ ] Create a new Single Page Application Client named **"SuperApp"**: it will be the used to signup/login users in Auth0
+- [ ] In the created client detail, add to the **Allowed Callback URLs** the URL you'll redirect the user after a succesfull login
+- [ ] Create a new API named **"SuperApp"**: it will be used to authenticate and authorize the Auth0 user to your server (by checking their JWT)
+- [ ] Create a new client named **"SuperApp Management API Client"**: it will be used for calling the Auth0 Management APIs for fetching and updating user informations
+- [ ] In Auth0 Management API details and in **Non Interactive Clients** enable your **Auths Management API client**
+- [ ] Super boring stuff ahead: since some essential permissions are not enabled by default on the **SuperApp** client, you'll need to [add them manually by making an API call to the Auth0 Management API](https://community.auth0.com/questions/3944/error-grant-type-password-not-allowed-for-the-clie)
+
+
+If you're ready for production, you'll need to replicate all the above stuff in a new tenant (named **superapp**) and also check the following:
+
+- [ ] If you use any social integration (Google, Facebook, etc...) you'll need to provide your own API token/secrets for that integration
+- [ ] Setup your own email service (Amazon Ses, Mandrill, etc...) for sending the Auth0 emails
+- [ ] Customize the email templates to better suit your needs
+
+I also suggest adding a custom rule for locking the user out of your app until it has not verified its email (it will still be able to access the app for the first day post-signup):
+```javascript
+function (user, context, callback) {
+  var oneDayPostSignup = new Date(user.created_at).getTime() + (24 * 60 * 60 * 1000);
+  if (!user.email_verified && new Date().getTime() > oneDayPostSignup) {
+    return callback(new UnauthorizedError('Please verify your email before logging in.'));
+  } else {
+    return callback(null, user, context);
+  }
+}
+```
+
 
 ### Stripe Setup
-To run this project you'll need a Stripe account.
-WIP.
+To run this project you'll need a [Stripe](https://stripe.com) account.
+
+Please make sure all the items in the following checklist are marked before running this project in development:
+
+- [ ] Create an account on [Stripe](https://stripe.com) and head to the Stripe [dashboard](https://dashboard.stripe.com/dashboard)
+- [ ] Switch to the **test mode** by toggling the **View test data** button in the left sidebar
+- [ ] Subscription -> Plans -> Create a new plan with a price of 0.00€/$: it will be your app free plan
+- [ ] Subscription -> Plans -> Create a new plan with a price you like: it will be your app paid plan
+
+If you're ready for production, you'll need to create the above subscription outside of the **test mode** too, and verify your business settings. 
 
 ### Setup
 
@@ -186,7 +227,7 @@ To run in production mode:
 
 ### Configuration  
 
-This project makes an heave use of environment variables for its configuration, so, if you want to run the project locally, you are adviced to include a `.env.server` and a `env.client` file in your project root (I use two dotenv files instead of one to keep the things clearer while developing).  
+This project makes an heavy use of environment variables for its configuration, so, if you want to run the project locally, you are adviced to include a `.env.server` and a `env.client` file in your project root (I use two dotenv files instead of one to keep the things clearer while developing).  
 
 Client environment variables:  
   
