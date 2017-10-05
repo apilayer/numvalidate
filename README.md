@@ -272,6 +272,12 @@ Server environment variables:
 | `PAPERTRAIL_PORT` | *OPTIONAL* | Papertrail port |
 | `SENTRY_DSN` | *OPTIONAL* | Sentry DSN |
 
+## External Related Issues And Pull Requests
+- zeit/next.js - [Added side note about enabling gzip on Koa](https://github.com/zeit/next.js/pull/2867)
+- auth0/auth0.js - [Nonce does not match](https://github.com/auth0/auth0.js/issues/365)
+- auth0/auth0.js - [Auth0 API it not instantly synced to Auth0 data](https://github.com/auth0/auth0.js/issues/515)
+- auth0/node-auth0 - [Recommended way to re-inject renewed token for Management API in a long-running script?](https://github.com/auth0/node-auth0/issues/164)
+
 
 ## Contributing
 Pull requests are welcome. File an issue for ideas, conversation or feedback.
