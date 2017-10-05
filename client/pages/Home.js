@@ -96,10 +96,10 @@ class Home extends Component<Props, void> {
         <div className={'Home-sep'} />
 
         <div className={'Home-plans'}>
-          <h1>Available plans</h1>
+          <h2>Available plans</h2>
           <div className={'Home-plans-row'}>
             <div className={'Home-plans-plan'}>
-              <h1 className={'Home-plans-plan-name'}>Unauthenticated</h1>
+              <h2 className={'Home-plans-plan-name'}>Unauthenticated</h2>
               <h2 className={'Home-plans-plan-price'}>0</h2>
               <ul>
                 <li className={'Home-plans-plan-description'}>Fully-featured validation</li>
@@ -109,7 +109,7 @@ class Home extends Component<Props, void> {
               </ul>
             </div>
             <div className={'Home-plans-plan'}>
-              <h1 className={'Home-plans-plan-name'}>Free</h1>
+              <h2 className={'Home-plans-plan-name'}>Free</h2>
               <h2 className={'Home-plans-plan-price'}>0</h2>
               <ul>
                 <li className={'Home-plans-plan-description'}>Fully-featured validation</li>
@@ -120,7 +120,7 @@ class Home extends Component<Props, void> {
               </ul>
             </div>
             <div className={'Home-plans-plan'}>
-              <h1 className={'Home-plans-plan-name'}>Pro</h1>
+              <h2 className={'Home-plans-plan-name'}>Pro</h2>
               <h2 className={'Home-plans-plan-price'}>3.99</h2>
               <ul>
                 <li className={'Home-plans-plan-description'}>Fully-featured validation</li>
@@ -146,7 +146,7 @@ class Home extends Component<Props, void> {
         <div className={'Home-sep'} />
 
         <div className={'Home-faq'}>
-          <h1>FAQ</h1>
+          <h2>FAQ</h2>
           <div className={'Home-faq-question'}>
             <h3>How are phone numbers validated?</h3>
             <p>
