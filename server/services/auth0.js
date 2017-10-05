@@ -42,7 +42,7 @@ exports.getUserById = async (auth0Token, userId) => {
       'content-type': 'application/json',
     },
   });
-  return response && response.length > 0 ? response[0] : undefined;
+  return response;
 };
 
 exports.updateUserAppMetadata = async (auth0Token, userId, appMetadata) => {
