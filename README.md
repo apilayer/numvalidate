@@ -24,18 +24,27 @@ NumValidate is open source, and in this repository you'll be able to find everyt
 
 ## Overview
 
+
+### Features
+- Plain simple phone number validation rest API, powered by [Google LibPhoneNumber](https://github.com/googlei18n/libphonenumber) and [documented](https://github.com/mmazzarolo/numvalidate-docs) with [Slate](https://github.com/lord/slate)
+- Server-side rendered responsive React website/landing-page (~160kb GZipped) 
+- Private API tokens generation and management for authenticated users through the Dashboard
+- Fully featured authentication for accessing the Dashboard: email + password, Github and Google login thanks to [Auth0](https://auth0.com/)
+- API requests with different rate limits for unauthenticated user, free user and pro user, updated in real time after a subscription change
+- Secure payment for paid subscriptions handled by [Stripe](https://stripe.com): change your payment method at any given time
+- API tokens cached with Redis for faster response time on consecutive requests
+- Production ready logging and error reporting using Winston, [Sentry](https://sentry.io) and [Papertrail](https://papertrailapp.com/)
+
 ### Stack
 - Node.js - (Web Server)
 - React - (Website and dashboard UI)
 - Next - (Routing, Server Side Rendering and code splitting)
 - Koa - (Web App Server)
 - Redis - (Caching)
-- Slate - (API documentation)
 - Flow - (Static Types in the Dashboard)
 - ESLint - (JS Best Practices/Code Highlighting)
 
 ### External services and platforms
-- [Heroku](https://www.heroku.com/) - (App deployment)
 - [Auth0](https://auth0.com/) - (Authentication and authorization)
 - [Stripe](https://stripe.com) - (Payment processing)
 - [Papertrail](https://papertrailapp.com/) - (Log management)
