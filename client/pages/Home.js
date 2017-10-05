@@ -135,6 +135,8 @@ class Home extends Component<Props, void> {
           <p className={'Home-plans-plan-footer'}>
             If your project is open source or you just need an higher rate limit feel free to{' '}
             <a href={`mailto:numvalidateapp@gmail.com?subject=I need an higher rate limit`}>
+              {' '}
+              title={'Contact me'}
               contact me
             </a>
             .
@@ -149,11 +151,12 @@ class Home extends Component<Props, void> {
             <h3>How are phone numbers validated?</h3>
             <p>
               NumValidates is powered by{' '}
-              <a href={'https://github.com/googlei18n/libphonenumber'}>Google LibPhoneNumber</a>, a
-              phone number formatting and parsing library released by Google, originally developed
-              for (and currently used in) Google's Android mobile phone operating system, which uses
-              several rigorous rules for parsing, formatting, and validating phone numbers for all
-              countries/regions of the world.
+              <a href={'https://github.com/googlei18n/libphonenumber'} title={'LibPhoneNumber'}>
+                Google LibPhoneNumber
+              </a>, a phone number formatting and parsing library released by Google, originally
+              developed for (and currently used in) Google's Android mobile phone operating system,
+              which uses several rigorous rules for parsing, formatting, and validating phone
+              numbers for all countries/regions of the world.
             </p>
           </div>
           <div className={'Home-faq-question'}>
@@ -162,8 +165,9 @@ class Home extends Component<Props, void> {
               Validating a phone number allows you to keep your user database clean and fight frauds
               by validating phone numbers at the point of entry into your system. <br /> NumValidate
               also allows you to format a phone number in the{' '}
-              <a href={'https://it.wikipedia.org/wiki/E.164'}>E164 format</a>, which is the standard
-              that you should use for safely storing you phone numbers.
+              <a href={'https://it.wikipedia.org/wiki/E.164'} title={'E164 format'}>
+                E164 format
+              </a>, which is the standard that you should use for safely storing you phone numbers.
             </p>
           </div>
           <div className={'Home-faq-question'}>
@@ -184,12 +188,16 @@ class Home extends Component<Props, void> {
               </i>{' '}
               be the main way to pay up the infrastructure.<br /> However, this is an open source
               project: You can find all its code on{' '}
-              <a href="https://github.com/mmazzarolo/numvalidate">Github</a>, and if you think
-              that the proposed price for the pro plan is too high you're free to install it in your
-              own server.<br />
+              <a href="https://github.com/mmazzarolo/numvalidate" title={'Numvalidate on github'}>
+                Github
+              </a>, and if you think that the proposed price for the pro plan is too high you're
+              free to install it in your own server.<br />
               Payments can be made via Credit Card (Visa, MasterCard, Discover, Diner's Club) and
-              are secured by <a href="https://stripe.com">Stripe</a>.<br />You can change your
-              payment method at any given time in the Payment section of your Account Dashboard.
+              are secured by{' '}
+              <a href="https://stripe.com" title={'Stripe'}>
+                Stripe
+              </a>.<br />You can change your payment method at any given time in the Payment section
+              of your Account Dashboard.
             </p>
           </div>
           <div className={'Home-faq-question'}>
@@ -218,11 +226,18 @@ class Home extends Component<Props, void> {
 
         <div className={'Home-footer'}>
           <p className={'Home-footer-credit'}>
-            Made with ♥ by <a href={'http://mmazzarolo.com'}>Mazzarolo Matteo</a>
+            Made with ♥ by{' '}
+            <a href={'http://mmazzarolo.com'} title={'Mazzarolo Matteo'}>
+              Mazzarolo Matteo
+            </a>
           </p>
           <div className={'Home-footer-left'}>
-            <a href={`mailto:numvalidateapp@gmail.com?subject=Support`}>Support</a>
-            <a href={`https://github.com/mmazzarolo/numvalidate`}>GitHub</a>
+            <a href={`mailto:numvalidateapp@gmail.com?subject=Support`} title={'Support'}>
+              Support
+            </a>
+            <a href={`https://github.com/mmazzarolo/numvalidate`} title={'Numvalidate on github'}>
+              GitHub
+            </a>
           </div>
         </div>
       </div>
