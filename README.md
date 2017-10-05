@@ -101,17 +101,25 @@ client
 ```     
 
 ### The Server
-The server is a Node application powered by Koa, responsible of handling all the API requests and rendering the website/dashboard.
+The server is a Node application powered by Koa, responsible of handling all the API requests and rendering the website/dashboard.  
+There is no database here: all the users info like the API tokens and the Stripe customer ID are stored in Auth0 in the user `appMetadata`. The endpoints defined in `routes/user.js` handles all the requests made by the Dashboard to manage the user info.  
+To fetch and update the users info from Auth0 and validate the user JWT I use an [Auth0 API](https://auth0.com/docs/api/info) (defined in `services/auth0.js`) with granted permissions to many [Auth0 management API endpoints](https://auth0.com/docs/api/management/v2).  
+The requests to the `/api` endpoints are rate limited by IP (for unauthenticated users) and by API token (for authenticated users). 
+
+The most interesting part of the server is probably the API token rate limiting and caching, which grants a fast response time on consecutive requests. The flow is the following:
+- An authenticated user makes a request to an `/api` endpoint with an `x-api-token` header.
+- The API token is validated in `middlewares/checkApiToken.js`: 
+  -  If the API token is not cached in Redis then the server searches for an user with that API token in Auth0 to check for its validity (and cache it)
+  - If the API token is already cached in Redis, the Auth0 search is skipped
+- The API token user's daily usage limit is checked in `middlewares/checkMaxRequests.js`:
+  - If the daily usage limit of the user is not cached in Redis then the server searches for it (and cache it) by fetching the user subscription plan on Stripe 
+  - If the daily usage limit of the user is cached in Redis, the Stripe fetch is skipped
+- If the user reached its daily API requests limit then the server doesn't finalize the call to the `/api` endpoint and returns a `429` status code instead (`middlewares/rateLimited.js`).
+
+The Redis cache expires after the milliseconds defined in the `REDIS_CACHE_EXPIRY_IN_MS` environment variable and after an user subscription plan change.  
 
 ```javascript
 server
- ├── components // The building blocks of the UI
- │   ├── Button.css 
- │   ├── Button.js
- │   ├── DashboardCreditCard.css
- │   ├── DashboardCreditCard.js
- │   └── ...
- │
  ├── config
  │   ├── keys.js // Constants used across the app (mostly are env vars)
  │   └── strings.js // Almost every string used in the Dashboard
@@ -129,7 +137,7 @@ server
  │   ├── rateLimiter.js // Blocks the request on max requests limit reached
  │   └── requestLogger.js // Logs the request on console/Papertrail/Sentry
  │
- ├── config
+ ├── routes
  │   ├── api.js // Phone validation endpoints
  │   └── user.js // Dashboard endpoints
  │
@@ -214,6 +222,7 @@ Server environment variables:
 | `RATE_LIMIT_FOR_FREE_USER_REQUESTS` | 1000 | Rate limit for free users |
 | `RATE_LIMIT_FOR_PRO_USER_REQUESTS` | 100000 | Rate limit for pro users |
 | `REDIS_URL` | *REQUIRED* | Redis URL |
+| `REDIS_CACHE_EXPIRY_IN_MS` | ms('1d') | Expiration of Redis cache in milliseconds |
 | `STRIPE_FREE_PLAN_ID` | *REQUIRED* | Free plan ID in Stripe |
 | `STRIPE_PRO_PLAN_ID` | *REQUIRED* | Pro plan ID in Stripe |
 | `STRIPE_PUBLIC_KEY` | *REQUIRED* | Stripe API public key |
