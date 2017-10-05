@@ -34,7 +34,7 @@ exports.getUserByApiToken = async (auth0Token, apiToken) => {
 
 exports.getUserById = async (auth0Token, userId) => {
   const response = await request({
-    url: `${AUTH0_API_URL}/users?q=user_id="${userId}"`,
+    url: `${AUTH0_API_URL}/users/${userId}`,
     method: 'GET',
     json: true,
     headers: {
