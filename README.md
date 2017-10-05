@@ -53,7 +53,13 @@ NumValidate is open source, and in this repository you'll be able to find everyt
 ## Architecture 
 
 ### The Client
-The client is a React application that exposes the **Home page** and the **Dashboard**, and both pages are rendered server-side thanks to Next. 
+The client is a React application that exposes the **Home page** and the **Dashboard**: both pages are rendered server-side thanks to Next. 
+To take advantage of Next server-side rendering, the app follows the convention of grouping the main routes under the `/pages` directory and putting all the static assets under `statics`. 
+
+The app itself is not a complex one: the *Home page* is just a simple page that emphasizes the product features, while the *Dashboard* (available after a successfull signup) is used for generating API tokens and updating the user subscription plan.  
+
+I tried to mimic the structure promoted by `create-react-app` as much as possible (since I love it for smaller sites), so I use plain CSS to style the components (with a touch of CSS just for supporting CSS Custom Variables for color names) and I don't use bleeding edge stuff like decorators et similia.  
+For the same reason, you won't find any state management library here, since `setState` has proven to be more than than enough for this project.
 
 ```javascript
 client
@@ -93,6 +99,7 @@ client
  │
  └── types.js // Flowtype type definitions
 ```     
+
 ### The Server
 The server is a Node application powered by Koa, responsible of handling all the API requests and rendering the website/dashboard.
 
@@ -136,7 +143,7 @@ server
  │   └── countries.json // Phone validation supported countries
  │
  ├── utils
- │   ├── common.js// Common utils used in all the app
+ │   ├── common.js // Common utils used in all the app
  │   └── logger.js // Winston logger setup
  │
  ├── utils // Common utils used in all the app
