@@ -25,9 +25,17 @@ const PageHead = (props: Props) => {
       <meta name={'author'} content={'Mazzarolo Matteo'} />
       <meta name={'viewport'} content={'width=device-width, initial-scale=1'} />
       <meta property={'og:url'} content={'https://numvalidate.com'} />
-      <meta property={'og:title'} content={'NumValidate'} />
-      <meta property={'og:description'} content={'Open Source phone number validation REST API'} />
-      <meta property={'og:image'} content={'/static/logo.png'} />
+      <meta property={'og:title'} content={'NumValidate - Phone number validation REST API'} />
+      <meta
+        property={'og:description'}
+        content={
+          'Free and open source REST API that provides a simple yet effective way to validate and format a phone number.'
+        }
+      />
+      <meta
+        property={'og:image'}
+        content={'https://numvalidate.com/static/website-screenshot.png'}
+      />
       <meta name={'theme-color'} content={'#21272f'} />
       <link
         rel={'apple-touch-icon'}
