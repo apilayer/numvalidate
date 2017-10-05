@@ -199,6 +199,8 @@ function (user, context, callback) {
 }
 ```
 
+### Redis Setup
+To run this project you'll need a running Redis instance.  
 
 ### Stripe Setup
 To run this project you'll need a [Stripe](https://stripe.com) account.
