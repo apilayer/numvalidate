@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+  web:
+    # builds the image based on ./Dockerfile
+    build: .
+    # command that will start the app
+    command: yarn start-dev
+    # mounts paths between the host and the container
+    volumes:
+      # mounts the root directory to the working directory in the container
+      - .:/app
+      # if you don't add node_modules, 'yarn' or 'npm i' won't work correctly
+      - /app/node_modules
+    ports:
+      - 1337:1337
+    depends_on:
+      - redis
+    env_file:
+      - ./client/.env.client
+      - ./server/.env.server

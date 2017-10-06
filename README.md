@@ -223,15 +223,41 @@ npm install
 npm run start-dev
 ```
 
+Or, if you prefer using yarn, run the app with:
+
+```bash
+yarn
+yarn start-dev
+```
+
 To run in production mode:
 
 `npm run build && npm start`
+
+Or, with yarn:
+
+`yarn build && yarn start`
+
+### Setup with Docker Compose
+
+This project supports [docker-compose](https://docs.docker.com/compose/).
+To run it, you must first:
+- rename [.env.client.example](https://github.com/mmazzarolo/numvalidate/blob/master/client/.env.client.example) to .env.client
+- rename [.env.server.example](https://github.com/mmazzarolo/numvalidate/blob/master/server/.env.server.example) to .env.server
+- run `docker-compose up -d` from the root folder of this repo
+
+If you want to check the output of a certain container, just run `docker-compose logs $CONTAINER_NAME`.
+`$CONTAINER_NAME` may be one of the following:
+- redis
+- web
+
+For additional infos, please check out [docker-compose.yml]((https://github.com/mmazzarolo/numvalidate/blob/master/docker-compose.yml)
 
 ### Configuration  
 
 This project makes an heavy use of environment variables for its configuration, so, if you want to run the project locally, you are adviced to include a `.env.server` and a `env.client` file in your project root (I use two dotenv files instead of one to keep the things clearer while developing).  
 
-Client environment variables:  
+Client environment variables: (check [.env.client.example](https://github.com/mmazzarolo/numvalidate/blob/master/client/.env.client.example))
   
 | Environment Variable | Default | Description |
 | ------------- | ------------- | ------------- |
@@ -248,7 +274,7 @@ Client environment variables:
 | `REACT_APP_MAX_API_TOKENS_PER_USER` | 5 | The maximum number of API tokens per user |
 | `REACT_APP_GOOGLE_SITE_VERIFICATION` | OPTIONAL | The Google Search Console verification key |
 
-Server environment variables:  
+Server environment variables: (check [.env.server.example](https://github.com/mmazzarolo/numvalidate/blob/master/server/.env.server.example))
   
 | Environment Variable | Default | Description |
 | ------------- | ------------- | ------------- |
