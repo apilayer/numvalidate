@@ -69,3 +69,19 @@ a:visited:hover,
 a:visited:focus {
   opacity: 1;
 }
+
+/**
+ * While waiting for this issue to be fixed...
+ * https://github.com/zeit/next.js/issues/2783 
+ */
+body > div {
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+#__next > div {
+  height: 100%;
+}
