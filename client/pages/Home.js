@@ -134,9 +134,10 @@ class Home extends Component<Props, void> {
           </div>
           <p className={'Home-plans-plan-footer'}>
             If your project is open source or you just need an higher rate limit feel free to{' '}
-            <a href={`mailto:numvalidateapp@gmail.com?subject=I need an higher rate limit`}>
-              {' '}
+            <a
+              href={`mailto:numvalidateapp@gmail.com?subject=I need an higher rate limit`}
               title={'Contact me'}
+            >
               contact me
             </a>
             .
