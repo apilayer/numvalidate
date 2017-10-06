@@ -248,10 +248,10 @@ To run it, you must first:
 
 If you want to check the output of a certain container, just run `docker-compose logs $CONTAINER_NAME`.
 `$CONTAINER_NAME` may be one of the following:
-- redis
-- web
+- `redis`
+- `web`
 
-For additional infos, please check out [docker-compose.yml]((https://github.com/mmazzarolo/numvalidate/blob/master/docker-compose.yml)
+For additional infos, please check out [docker-compose.yml](https://github.com/mmazzarolo/numvalidate/blob/master/docker-compose.yml).
 
 ### Configuration  
 
