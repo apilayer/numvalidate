@@ -1,17 +1,17 @@
 /* @flow */
-import React, { Component } from 'react';
-import StripeCheckout from 'react-stripe-checkout';
-import Button from './Button';
-import keys from '../config/keys';
-import strings from '../config/strings';
-import style from './StripeCheckoutButton.css';
+import React, { Component } from "react";
+import StripeCheckout from "react-stripe-checkout";
+import Button from "./Button";
+import keys from "../config/keys";
+import strings from "../config/strings";
+import style from "./StripeCheckoutButton.css";
 
 type Props = {
   text: string,
   amount: ?number,
   allowRememberMe?: boolean,
   email?: string,
-  onStripeTokenReceived: (token: string) => mixed,
+  onStripeTokenReceived: (token: string) => mixed
 };
 
 class StripeCheckoutButton extends Component<Props, void> {
@@ -34,7 +34,7 @@ class StripeCheckoutButton extends Component<Props, void> {
         allowRememberMe={allowRememberMe}
         panelLabel={text}
         email={email}
-        image={'/static/logo@2x.webp'}
+        image={"/static/logo@2x.png"}
         {...otherProps}
       >
         <style jsx>{style}</style>
