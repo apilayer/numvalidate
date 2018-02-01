@@ -1,29 +1,29 @@
-const Koa = require('koa');
-const bodyMiddleware = require('koa-body');
-const helmetMiddleware = require('koa-helmet');
-const koaBouncer = require('koa-bouncer');
-const koaRouter = require('koa-router')();
-const koaConnect = require('koa-connect');
-const sendfile = require('koa-sendfile');
-const compression = require('compression');
-const next = require('next');
-const getIpAddressMiddleware = require('./middlewares/getIpAddress');
-const loggerMiddleware = require('./middlewares/requestLogger');
-const checkAuthTokenMiddleware = require('./middlewares/checkAuthToken');
-const checkMaxRequestsMiddleware = require('./middlewares/checkMaxRequests');
-const checkStripeCustomerMiddleware = require('./middlewares/checkStripeCustomer');
-const fetchUserFromAuth0Middleware = require('./middlewares/fetchUserFromAuth0');
-const auth0TokenGeneratorMiddleware = require('./middlewares/auth0TokenGenerator');
-const errorHandlerMiddleware = require('./middlewares/errorHandler');
-const allowCrossDomainMiddleware = require('./middlewares/allowCrossDomain');
-const checkApiTokenMiddleware = require('./middlewares/checkApiToken');
-const rateLimiterMiddleware = require('./middlewares/rateLimiter');
-const userRoutes = require('./routes/user');
-const apiRoutes = require('./routes/api');
-const keys = require('./config/keys');
+const Koa = require("koa");
+const bodyMiddleware = require("koa-body");
+const helmetMiddleware = require("koa-helmet");
+const koaBouncer = require("koa-bouncer");
+const koaRouter = require("koa-router")();
+const koaConnect = require("koa-connect");
+const sendfile = require("koa-sendfile");
+const compression = require("compression");
+const next = require("next");
+const getIpAddressMiddleware = require("./middlewares/getIpAddress");
+const loggerMiddleware = require("./middlewares/requestLogger");
+const checkAuthTokenMiddleware = require("./middlewares/checkAuthToken");
+const checkMaxRequestsMiddleware = require("./middlewares/checkMaxRequests");
+const checkStripeCustomerMiddleware = require("./middlewares/checkStripeCustomer");
+const fetchUserFromAuth0Middleware = require("./middlewares/fetchUserFromAuth0");
+const auth0TokenGeneratorMiddleware = require("./middlewares/auth0TokenGenerator");
+const errorHandlerMiddleware = require("./middlewares/errorHandler");
+const allowCrossDomainMiddleware = require("./middlewares/allowCrossDomain");
+const checkApiTokenMiddleware = require("./middlewares/checkApiToken");
+const rateLimiterMiddleware = require("./middlewares/rateLimiter");
+const userRoutes = require("./routes/user");
+const apiRoutes = require("./routes/api");
+const keys = require("./config/keys");
 
 const app = new Koa();
-const nextApp = next({ dev: keys.IS_ENV_DEVELOPMENT, dir: './client' });
+const nextApp = next({ dev: keys.IS_ENV_DEVELOPMENT, dir: "./client" });
 
 app.poweredBy = false;
 
@@ -44,64 +44,72 @@ const handle = nextApp.getRequestHandler();
 nextApp.prepare().then(() => {
   koaRouter
     .get(
-      '/api/validate',
+      "/api/validate",
       checkApiTokenMiddleware,
       checkMaxRequestsMiddleware,
       rateLimiterMiddleware,
       apiRoutes.validate
     )
-    .get('/api/countries', checkApiTokenMiddleware, rateLimiterMiddleware, apiRoutes.getCountries)
-    .get('/user', checkAuthTokenMiddleware, fetchUserFromAuth0Middleware, userRoutes.getUser)
-    .post(
-      '/user/customer',
-      checkAuthTokenMiddleware,
-      fetchUserFromAuth0Middleware,
-      userRoutes.createUserCustomer
+    .get(
+      "/api/countries",
+      checkApiTokenMiddleware,
+      rateLimiterMiddleware,
+      apiRoutes.getCountries
     )
-    .post(
-      '/user/token',
-      checkAuthTokenMiddleware,
-      fetchUserFromAuth0Middleware,
-      userRoutes.createUserApiToken
-    )
-    .delete(
-      '/user/token/:tokenValue',
-      checkAuthTokenMiddleware,
-      fetchUserFromAuth0Middleware,
-      userRoutes.deleteUserApiToken
-    )
-    .patch(
-      '/user/subscription',
-      checkAuthTokenMiddleware,
-      fetchUserFromAuth0Middleware,
-      checkStripeCustomerMiddleware,
-      userRoutes.updateUserSubscription
-    )
-    .patch(
-      '/user/source',
-      checkAuthTokenMiddleware,
-      fetchUserFromAuth0Middleware,
-      checkStripeCustomerMiddleware,
-      userRoutes.updateUserSource
-    )
-    .get('/robots.txt', async (ctx, next) => {
-      if (keys.EXECUTION_ENV === 'production') {
-        await sendfile(ctx, './client/static/robots-production.txt');
+    /**
+     * Since October 2017 it is impossible to use the search function on Auth0, so the following routes are not exposed anymore
+     */
+    // .get('/user', checkAuthTokenMiddleware, fetchUserFromAuth0Middleware, userRoutes.getUser)
+    // .post(
+    //   '/user/customer',
+    //   checkAuthTokenMiddleware,
+    //   fetchUserFromAuth0Middleware,
+    //   userRoutes.createUserCustomer
+    // )
+    // .post(
+    //   '/user/token',
+    //   checkAuthTokenMiddleware,
+    //   fetchUserFromAuth0Middleware,
+    //   userRoutes.createUserApiToken
+    // )
+    // .delete(
+    //   '/user/token/:tokenValue',
+    //   checkAuthTokenMiddleware,
+    //   fetchUserFromAuth0Middleware,
+    //   userRoutes.deleteUserApiToken
+    // )
+    // .patch(
+    //   '/user/subscription',
+    //   checkAuthTokenMiddleware,
+    //   fetchUserFromAuth0Middleware,
+    //   checkStripeCustomerMiddleware,
+    //   userRoutes.updateUserSubscription
+    // )
+    // .patch(
+    //   '/user/source',
+    //   checkAuthTokenMiddleware,
+    //   fetchUserFromAuth0Middleware,
+    //   checkStripeCustomerMiddleware,
+    //   userRoutes.updateUserSource
+    // )
+    .get("/robots.txt", async (ctx, next) => {
+      if (keys.EXECUTION_ENV === "production") {
+        await sendfile(ctx, "./client/static/robots-production.txt");
       } else {
-        await sendfile(ctx, './client/static/robots-development.txt');
+        await sendfile(ctx, "./client/static/robots-development.txt");
       }
     })
-    .get('/dashboard', async (ctx, next) => {
+    // .get('/dashboard', async (ctx, next) => {
+    //   ctx.res.statusCode = 200;
+    //   await nextApp.render(ctx.req, ctx.res, '/Dashboard', ctx.query);
+    //   ctx.respond = false;
+    // })
+    .get("/", async (ctx, next) => {
       ctx.res.statusCode = 200;
-      await nextApp.render(ctx.req, ctx.res, '/Dashboard', ctx.query);
+      nextApp.render(ctx.req, ctx.res, "/Home", ctx.query);
       ctx.respond = false;
     })
-    .get('/', async (ctx, next) => {
-      ctx.res.statusCode = 200;
-      nextApp.render(ctx.req, ctx.res, '/Home', ctx.query);
-      ctx.respond = false;
-    })
-    .get('*', async (ctx, next) => {
+    .get("*", async (ctx, next) => {
       ctx.res.statusCode = 200;
       await handle(ctx.req, ctx.res);
       ctx.respond = false;
