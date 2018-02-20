@@ -21,6 +21,11 @@ NumValidate is a phone validation REST API powered by Google LibPhoneNumber, a p
   <a href="https://numvalidate.com">numvalidate.com</a>
 </p>
 
+## Disclaimer
+
+NumValidate is currently out of service becacuse in December 2017 Auth0 has stopped supporting the core API authorization mechanism used by the app (querying for users by `app_metadata`).  
+From my understanding the Auth0 team is not planning to re-introduce this feature anymore.
+
 ## Overview
 
 In this repository you'll be able to find everything you'll need to setup your own NumValidate platform.  
